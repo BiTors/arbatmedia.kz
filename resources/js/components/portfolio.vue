@@ -3,7 +3,7 @@
         <v-lazy>
         <v-container id="five">
         <div class="dt">
-            <h2>ПРИМЕРЫ РАБОТ</h2>
+            <h2>ПОРТФОЛИО</h2>
             <div class="title-line"></div>
         </div>
             <div class="_wr">
