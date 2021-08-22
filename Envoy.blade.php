@@ -3,7 +3,7 @@ $user = 'dagna';
 $timezone = 'Asia/Almaty';
 $path = '/var/www/dagna';
 $current = $path.'/current';
-$repo = 'git@github.com:BiTors/dagna.git';
+$repo = 'git@github.com:BiTors/dagna.kz.git';
 $branch = 'master';
 
 $chmods = [
@@ -22,18 +22,17 @@ $release  = $path.'/release/'.$date->format('YmdHis');
 @endtask
 
 @task('composer',['on'=>$on])
-    composer self-update
-    cd{{$release}}
+    cd {{$release}}
     composer install --no-interaction --no-dev --prefer-dist
     echo "#2 - Composer dependencies have been installed"
 @endtask
 
 @task('artisan',['on'=>$on])
-    cd{{$release}}
+    cd {{$release}}
     ln -nfs {{$path}}/.env .env;
     chgrp -h www-data .env;
      php artisan config:clear
-    php artisan migrate
+    php artisan migrate --force
     php artisan clear-compiled --env=production;
     php artisan optimize --env=production;
     echo "#3 - Production"
