@@ -111,7 +111,7 @@
                     <v-col class="_a6 component">
                         <blockquote class="callout quote EN">
                             Тексты — это такие порталы в голову ближнего.
-                            <cite> - Курара, «Шикарная жизнь»</cite>
+                            <cite> - Курара, «Шикарная жизнь».</cite>
                         </blockquote>
                     </v-col>
                 </v-row>
