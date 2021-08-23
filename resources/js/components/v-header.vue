@@ -200,8 +200,8 @@ export default {
     right: 0;
     left: -40px;
     opacity: 0.1;
-    -webkit-animation-name: rotation-data-v-3e583b0f;
-    animation-name: rotation-data-v-3e583b0f;
+    -webkit-animation-name: rotation;
+    animation-name: rotation;
     -webkit-animation-duration: 20s;
     animation-duration: 30s;
     -webkit-animation-iteration-count: infinite;
