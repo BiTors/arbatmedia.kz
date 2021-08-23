@@ -11,15 +11,20 @@ $chmods = [
 ];
 $date = new DateTime('now',new DateTimeZone($timezone));
 $release  = $path.'/release/'.$date->format('YmdHis');
+$releaseUpdate  = $path.'/release/20210823022747/';
 @endsetup
 
 @servers(['production'=>[$user.'@45.149.128.57']])
+
+
 
 @task('clone',['on'=>$on])
     mkdir -p {{$release}}
     git clone --depth 1 -b {{$branch}} "{{$repo}}" {{$release}}
     echo "#1 -Repository has been cloned"
 @endtask
+
+
 
 @task('composer',['on'=>$on])
     cd {{$release}}
@@ -33,8 +38,6 @@ $release  = $path.'/release/'.$date->format('YmdHis');
     chgrp -h www-data .env;
      php artisan config:clear
     php artisan migrate --force
-    php artisan clear-compiled --env=production;
-    php artisan optimize --env=production;
     echo "#3 - Production"
 @endtask
 
@@ -55,12 +58,41 @@ $release  = $path.'/release/'.$date->format('YmdHis');
     chgrp -h www-data {{$current}};
     echo "#5 - Symlinks";
 @endtask
-    @macro('deploy',['on'=>'production'])
+
+@macro('deploy',['on'=>'production'])
     clone
     composer
     artisan
     chmod
     update_symlinks
 @endmacro
+
+@task('update',['on'=>$on])
+    cd {{$current}}
+    git reset --hard HEAD
+    git pull origin master
+    echo "#1 -Repository has been update"
+@endtask
+
+@task('artisan_update',['on'=>$on])
+    cd {{$releaseUpdate}}
+    php artisan config:clear
+    php artisan migrate --force
+    echo "#2 - Production-update"
+@endtask
+
+@task('npm',['on'=>$on])
+    cd {{$releaseUpdate}}
+    npm run prod
+    echo "#3 - npm prod"
+@endtask
+
+@macro('d_update',['on'=>'production'])
+    update
+    artisan_update
+    npm
+@endmacro
+
+
 
 

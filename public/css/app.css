@@ -261,7 +261,6 @@ input{
     padding: 12px;
     border-radius: 8px;
     margin: 10px 0px;
-    background: var(--mainColor);
     border: none;
     width: 100%;
     box-sizing: border-box;
@@ -347,7 +346,7 @@ input{
         bottom: 10px;
     }
     .img-logo {
-        width: 90px;
+        width: 200px;
         position: relative;
         top: 4px;
     }
@@ -374,9 +373,7 @@ input{
 }
 @media only screen and (max-width: 375px) {
     .img-logo {
-        width: 90px;
-        position: relative;
-        top: 4px;
+        width: 132px;
     }
     .header-panel {
         display: flex;

@@ -34,7 +34,7 @@
         </div>
     </div>
 </body>
-<link href="{{mix('/css/app.css')}}" rel="stylesheet">
+<link href="{{ mix('/css/app.css') }}" rel="stylesheet" media="all" />
 <script src="{{ mix('js/app.js') }}"></script>
 </html>
 
