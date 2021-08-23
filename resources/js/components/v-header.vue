@@ -1,6 +1,5 @@
 <template>
     <div>
-
         <div class="v-headers">
             <div class="header-panel ">
                 <div class="logo">
@@ -58,11 +57,6 @@
                    <!-- <div class="_ml">
                         <v-btn v-on:click="send()"  class="small secondary">Оставить заявку</v-btn>
                    </div>-->
-                    <div class=" _ms">
-                        <v-btn class="mx-2" elevation="0" small fab dark color="primary">
-                                <img src="/img/send.svg" alt="" class="svs">
-                        </v-btn>
-                    </div>
                 </div>
             </div>
        </div>
@@ -222,9 +216,7 @@ export default {
     transform:rotate(360deg);
 }
 }
-.svs{
-width: 22px;
-}
+
 ._ml{
 margin: 0px 30px;
 }
@@ -235,9 +227,7 @@ margin: 0px 30px;
 form{
 width: 90%;
 }
-._ms{
-display: none;
-}
+
 .doted{
 
 top: 10px;
@@ -346,29 +336,16 @@ opacity: 0.2;
         font-size: 4rem;
     }
 }
-@media only screen and (max-width: 920px) {
-._ms{
-    display: block;
 
-}
-._ms>img{
-    background: #184541;
-    width: 25px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    margin: auto;
-}
 ._ml{
     display: none;
 }
 .v-header{
     justify-content: flex-end;
     min-width: 150px;
+    display: block;
 }
-}
+
 @media only screen and (min-width: 576px) and (max-width: 768px) {
 
 .doted{
@@ -386,10 +363,10 @@ opacity: 0.2;
         90deg
     );
 }
-.area {
-    padding-bottom: 45px;
-    height: 480px;
-}
+    .area {
+        padding-bottom: 45px;
+        height: 480px;
+    }
     ._gth {
         font-size: 2rem;
     }
@@ -415,7 +392,6 @@ opacity: 0.2;
 }
 .area {
     padding-bottom: 45px;
-    padding-top: 45px;
     height: 420px;
 
 
@@ -464,8 +440,9 @@ opacity: 0.2;
     }
     .area {
         height: 253px;
-        padding-top: 45px;
-
+    }
+    .img-logo {
+        width: 132px;
     }
     ._gtx {
         font-size: 1.4rem;
@@ -473,27 +450,55 @@ opacity: 0.2;
     ._gth {
         font-size: 1rem;
     }
-    ._ms>img {
-        width: 20px;
-    }
-
     ._gtx{
         text-align: center;
     }
     ._ght{
         text-align: center;
     }
+    .doted-long{
+        position: absolute;
+        bottom: 231px;
+        right: -273px;
+        opacity: 0.1;
+        transform: rotate(
+            90deg
+        );
+    }
 }
 @media only screen and (max-width: 260px) {
-
-    .area {
-        height: 360px;
+    .img-logo {
+        width: 110px;
+    }
+    .main-disp {
+        font-size: 0.8rem;
     }
     ._gtx {
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
     ._gth {
         font-size: 0.8rem;
+    }
+    ._gtx{
+        text-align: center;
+    }
+    ._ght{
+        text-align: center;
+    }
+    .doted-long{
+        position: absolute;
+        bottom: 231px;
+        right: -273px;
+        opacity: 0.1;
+        transform: rotate(
+            90deg
+        );
+    }
+}
+@media only screen and (max-width: 920px) {
+    .v-header {
+        display: none;
+
     }
 }
 </style>

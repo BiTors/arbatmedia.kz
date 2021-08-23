@@ -28,6 +28,7 @@
                  <e-section></e-section>--}}
                 <b-section></b-section>
                     <steps></steps>
+                <e-section></e-section>
 
             </v-app>
         </div>
