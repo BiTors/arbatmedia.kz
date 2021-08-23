@@ -6,13 +6,14 @@
 
 require('./bootstrap');
 
-window.Vue = require('vue').default;
 
 import Vue from 'vue';
 import Vuex from 'vuex';
-
-
+import VueRouter from 'vue-router';
+Vue.use(VueRouter);
+import routes from './routes';
 Vue.use(Vuex);
+
 
 import Store from "./store/index";
 const store = new Vuex.Store(
@@ -32,7 +33,9 @@ import vuetify from './plugins/vuetify'
 
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
-
+Vue.component('c-menu', require('./components/Menu.vue').default);
+Vue.component('c-home', require('./components/Home.vue').default);
+Vue.component('c-rewrite', require('./components/Rewrite.vue').default);
 Vue.component('main-component', require('./components/ExampleComponent.vue').default);
 Vue.component('v-header', require('./components/v-header.vue').default);
 Vue.component('a-section', require('./components/a-section.vue').default);
@@ -53,9 +56,10 @@ Vue.component('footer-c', require('./components/footer-c.vue').default);
  */
 
 const app = new Vue({
-
     el: '#app',
+    router: new VueRouter(routes),
     store,
-    vuetify
+    vuetify,
+
 
 });

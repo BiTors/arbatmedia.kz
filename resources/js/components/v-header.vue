@@ -1,69 +1,7 @@
 <template>
     <div>
-        <div class="v-headers">
-            <div class="header-panel ">
-                <div class="logo">
-                    <img class="img-logo" src="/img/dagna.png" alt="">
-                </div>
-                <nav class="nav-top-m">
-                        <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-                    <v-navigation-drawer
-                        v-model="drawer"
-                        absolute
-                    >
-                        <v-list
-                            nav
-                            dense
-                        >
-                            <v-list-item-group
-                                v-model="group"
-                                active-class="deep-purple--text text--accent-4"
-                            >
-                                <v-list-item>
-                                    <v-list-item-title><a href="#one">ГЛАВНАЯ</a> </v-list-item-title>
-                                </v-list-item>
-
-                                <v-list-item>
-                                    <v-list-item-title><a href="#two">О НАС</a> </v-list-item-title>
-                                </v-list-item>
-
-                                <v-list-item>
-                                    <v-list-item-title><a href="#three">УСЛУГИ</a></v-list-item-title>
-                                </v-list-item>
-
-                                <v-list-item>
-                                    <v-list-item-title><a href="#four">КАК МЫ РАБОТАЕМ</a></v-list-item-title>
-                                </v-list-item>
-
-                                <v-list-item>
-                                    <v-list-item-title><a href="#five"> ПОРТФОЛИО</a></v-list-item-title>
-                                </v-list-item>
-
-
-                            </v-list-item-group>
-                        </v-list>
-                    </v-navigation-drawer>
-                </nav>
-                <div class="v-header">
-                    <nav class="nav-top">
-                        <ul class="navbar-nav">
-                            <li class="mm active"><a href="#one">Главная</a></li>
-                            <li class="mm"><a href="#two">О нас</a></li>
-                            <li class="mm"><a href="#three">Услуги</a></li>
-                            <li class="mm"><a href="#four">Как мы работаем</a></li>
-                            <li class="mm"><a href="#five">Портфолио</a></li>
-                        </ul>
-                    </nav>
-                   <!-- <div class="_ml">
-                        <v-btn v-on:click="send()"  class="small secondary">Оставить заявку</v-btn>
-                   </div>-->
-                </div>
-            </div>
-       </div>
-
         <v-container class="area ">
             <kinesis-container class="area-t">
-
                  <div class="cont-area">
                      <div class="main-area">
                          <div class="title-box">
@@ -140,8 +78,6 @@ export default {
     data() {
         return{
             active:false,
-            drawer: false,
-            group: null,
             headerSlider:0,
             length: 2,
             content: {
@@ -156,17 +92,12 @@ export default {
             phoneNumber:'',
             errors:'',
             nameRules:[],
-
         }
     },
     computed: {
         ...mapGetters({getDialog:'getDialog',getLoad:'getLoad'}),
     },
-    watch: {
-        group () {
-            this.drawer = false
-        },
-    },
+
         methods:{
             ...mapActions({actionTopForm:'actionTopForm'}),
             next () {
@@ -185,7 +116,7 @@ export default {
         }
     },
     mounted() {
-        console.log(this.$vuetify.theme)
+
     }
 }
 </script>
@@ -337,14 +268,7 @@ opacity: 0.2;
     }
 }
 
-._ml{
-    display: none;
-}
-.v-header{
-    justify-content: flex-end;
-    min-width: 150px;
-    display: block;
-}
+
 
 @media only screen and (min-width: 576px) and (max-width: 768px) {
 
@@ -393,8 +317,6 @@ opacity: 0.2;
 .area {
     padding-bottom: 45px;
     height: 420px;
-
-
 }
     ._gth {
         font-size: 1.7rem;
@@ -424,25 +346,10 @@ opacity: 0.2;
         );
     }
 }
-@media only screen and (max-width: 620px) {
-.v-header{
-    justify-content: flex-end;
-    min-width: 90px;
-}
-}
 @media only screen and (max-width: 320px) {
-    .v-header{
-        justify-content: flex-end;
-        min-width: 70px;
-    }
-    .v-headers{
-        top: 10px;
-    }
+
     .area {
         height: 253px;
-    }
-    .img-logo {
-        width: 132px;
     }
     ._gtx {
         font-size: 1.4rem;
@@ -467,9 +374,6 @@ opacity: 0.2;
     }
 }
 @media only screen and (max-width: 260px) {
-    .img-logo {
-        width: 110px;
-    }
     .main-disp {
         font-size: 0.8rem;
     }
@@ -493,12 +397,6 @@ opacity: 0.2;
         transform: rotate(
             90deg
         );
-    }
-}
-@media only screen and (max-width: 920px) {
-    .v-header {
-        display: none;
-
     }
 }
 </style>

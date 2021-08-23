@@ -12,9 +12,9 @@ use App\Http\Controllers\TelegramBot;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', function () {
+Route::get('/{any}', function () {
     return view('index');
-});
+})->where('any','.*');
 
 Route::post('/bot', [TelegramBot::class, 'Bot']);
 Route::post('/coll-me', [TelegramBot::class, 'botOne']);
