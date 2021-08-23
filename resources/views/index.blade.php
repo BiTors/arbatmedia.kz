@@ -5,9 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>DAGNA.KZ</title>
+    <title>Редакторсоке бюро dagna.kz</title>
     <!-- Fonts -->
-
 </head>
 <body>
     <div class="wrapper">
@@ -20,7 +19,7 @@
         </div>
     </div>
 </body>
-<link href="{{ mix('/css/app.css') }}" rel="stylesheet" media="all" />
+<link href="{{ mix('/css/app.css') }}" rel="stylesheet"/>
 <script src="{{ mix('js/app.js') }}"></script>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
