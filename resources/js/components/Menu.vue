@@ -20,24 +20,27 @@
                             active-class="deep-purple--text text--accent-4"
                         >
                             <v-list-item>
-                                <v-list-item-title><a href="#one">ГЛАВНАЯ</a> </v-list-item-title>
+                                <v-list-item-title><a @click="$router.push({name:'home'})" href="#one">ГЛАВНАЯ</a> </v-list-item-title>
                             </v-list-item>
 
 
                             <v-list-item>
-                                <v-list-item-title><a href="#two">О НАС</a> </v-list-item-title>
+                                <v-list-item-title><a @click="$router.push({name:'home'})" href="#two">О НАС</a> </v-list-item-title>
                             </v-list-item>
 
                             <v-list-item>
-                                <v-list-item-title><a href="#three">УСЛУГИ</a></v-list-item-title>
+                                <v-list-item-title><a @click="$router.push({name:'home'})" href="#three">УСЛУГИ</a></v-list-item-title>
                             </v-list-item>
 
                             <v-list-item>
-                                <v-list-item-title><a href="#four">КАК МЫ РАБОТАЕМ</a></v-list-item-title>
+                                <v-list-item-title><a @click="$router.push({name:'home'})" href="#four">КАК МЫ РАБОТАЕМ</a></v-list-item-title>
                             </v-list-item>
 
                             <v-list-item>
-                                <v-list-item-title><a href="#five"> ПОРТФОЛИО</a></v-list-item-title>
+                                <v-list-item-title><a @click="$router.push({name:'home'})" href="#five"> ПОРТФОЛИО</a></v-list-item-title>
+                            </v-list-item>
+                            <v-list-item>
+                                <v-list-item-title><a @click="$router.push({name:'service'})"> СЕРВИСЫ</a></v-list-item-title>
                             </v-list-item>
                         </v-list-item-group>
                     </v-list>
@@ -46,14 +49,12 @@
             <div class="v-header">
                 <nav class="nav-top">
                     <ul class="navbar-nav">
-                        <li class="mm active"><a href="#one">Главная</a></li>
-                        <li class="mm"><a href="#two">О нас</a></li>
-                        <li class="mm"><a href="#three">Услуги</a></li>
-                        <li class="mm"><a href="#four">Как мы работаем</a></li>
-                        <li class="mm"><a href="#five">Портфолио</a></li>
-                    <li class="mm"> <router-link to="/rewrite">Сервис</router-link></li>
-
-
+                        <li class="mm active"><a @click="$router.push({name:'home'})" href="#one">Главная</a></li>
+                        <li class="mm"><a @click="$router.push({name:'home'})" href="#two">О нас</a></li>
+                        <li class="mm"><a @click="$router.push({name:'home'})" href="#three">Услуги</a></li>
+                        <li class="mm"><a @click="$router.push({name:'home'})" href="#four">Как мы работаем</a></li>
+                        <li class="mm"><a @click="$router.push({name:'home'})" href="#five">Портфолио</a></li>
+                        <li class="mm"><a @click="$router.push({name:'service'})" >Сервисы</a></li>
                     </ul>
                 </nav>
             </div>

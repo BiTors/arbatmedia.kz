@@ -1,6 +1,7 @@
 import Home from './components/Home'
 import Rewrite from './components/Rewrite'
 import NotFound from './components/NotFound'
+import Service from './components/Service'
 export default {
     mode:'history',
     routes:[
@@ -10,10 +11,17 @@ export default {
         },
         {
             path:'/',
+            name:'home',
             component:Home,
         },
         {
-            path:'/rewrite',
+            path:'/service',
+            name:'service',
+            component:Service,
+        },
+        {
+            path:'/service/rewrite',
+            name:'rewrite',
             component:Rewrite,
         },
     ]

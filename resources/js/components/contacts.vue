@@ -241,6 +241,7 @@ name: "contacts",
     flex-direction: column;
     align-items: center;
     text-align: center;
+    padding-bottom: 150px;
 }
 ._sli-n{
     font-family: 'fastweb';

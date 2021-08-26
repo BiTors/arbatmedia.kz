@@ -36,7 +36,6 @@ import vuetify from './plugins/vuetify'
 Vue.component('c-menu', require('./components/Menu.vue').default);
 Vue.component('c-home', require('./components/Home.vue').default);
 Vue.component('c-rewrite', require('./components/Rewrite.vue').default);
-Vue.component('main-component', require('./components/ExampleComponent.vue').default);
 Vue.component('v-header', require('./components/v-header.vue').default);
 Vue.component('a-section', require('./components/a-section.vue').default);
 Vue.component('b-section', require('./components/b-section.vue').default);
@@ -48,6 +47,7 @@ Vue.component('f-section', require('./components/f-section.vue').default);
 Vue.component('portfolio', require('./components/portfolio.vue').default);
 Vue.component('contacts', require('./components/contacts.vue').default);
 Vue.component('footer-c', require('./components/footer-c.vue').default);
+Vue.component('c-partner', require('./components/partner.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

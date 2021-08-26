@@ -4,6 +4,7 @@
     <a-section></a-section>
     <f-section></f-section>
     <portfolio></portfolio>
+    <c-partner></c-partner>
     <contacts></contacts>
     <b-section></b-section>
     <steps></steps>

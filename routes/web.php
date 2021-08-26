@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TelegramBot;
+use App\Http\Controllers\Revrite;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,6 +19,8 @@ Route::get('/{any}', function () {
 
 Route::post('/bot', [TelegramBot::class, 'Bot']);
 Route::post('/coll-me', [TelegramBot::class, 'botOne']);
+Route::post('/rewrite', [Revrite::class, 'rewrite']);
+Route::post('/rewrites', [Revrite::class, 'translate']);
 
 //Auth::routes();
 

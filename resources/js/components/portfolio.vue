@@ -1,6 +1,5 @@
 <template>
     <div>
-        <v-lazy>
         <v-container id="five">
         <div class="dt">
             <h2>ПОРТФОЛИО</h2>
@@ -54,9 +53,7 @@
                     <div class="image-wrapper">
                         <div class="_c"></div>
                         <img class="_w" src="/img/metr.png" alt="Как я создал метры">
-                        <div class="_cc">
-                            <v-btn class="white--text" color="var(--blue)">Подробнее</v-btn>
-                        </div>
+
                     </div>
                 </div>
             </swiper-slide>
@@ -100,9 +97,7 @@
                     <div class="image-wrapper">
                         <div class="_c"></div>
                         <img class="_w" src="/img/rmm.png" alt="Как я создал метры">
-                        <div class="_cc">
-                            <v-btn class="white--text" color="var(--blue)">Подробнее</v-btn>
-                        </div>
+
                     </div>
                 </div>
             </swiper-slide>
@@ -146,9 +141,7 @@
                     <div class="image-wrapper">
                         <div class="_c"></div>
                         <img class="_w" src="/img/sav.png" alt="Как я создал метры">
-                        <div class="_cc">
-                            <v-btn class="white--text" color="var(--blue)">Подробнее</v-btn>
-                        </div>
+
                     </div>
                 </div>
             </swiper-slide>
@@ -192,9 +185,7 @@
                     <div class="image-wrapper">
                         <div class="_c"></div>
                         <img class="_w" src="/img/dn.png" alt="Как я создал метры">
-                        <div class="_cc">
-                            <v-btn class="white--text" color="var(--blue)">Подробнее</v-btn>
-                        </div>
+
                     </div>
                 </div>
             </swiper-slide>
@@ -205,7 +196,6 @@
         </swiper>
 </div>
         </v-container>
-        </v-lazy>
         <div>
             <v-lazy>
             <v-container id="five">
@@ -316,8 +306,18 @@ export default {
                     link:'https://www.adme.ru/svoboda-sdelaj-sam/6-prilozhenij-kotorye-uberegut-ot-neudachnyh-eksperimentov-s-vneshnostyu-1517365/',
                     linkImg:'/img/admi_2.png',
                 },
-                2:'Во воласти медиа',
-                3:'Роскошный brunello cucinelli',
+                2:{
+                    title:'На детский ответ «почему» отвечает не мама, а Алиса из Yandex”.',
+                    body:'Статья в печатном издании глянцевого журнала Vintage и на портале Vintage.kz.',
+                    link:'https://vintage.kz/yandex/',
+                    linkImg:'/img/vint_page_2.png',
+                },
+                3:{
+                    title:'ВО ВЛАСТИ МЕДИА. АРМАНЖАН БАЙТАСОВ.',
+                    body:'Статья в печатном издании глянцевого журнала Vintage и на портале Vintage.kz.',
+                    link:'https://vintage.kz/styl-zhizni-armanzhan-bajtasov/',
+                    linkImg:'/img/vint.png',
+                },
             },
             swiperOptions: {
                 pagination: {

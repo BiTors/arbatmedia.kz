@@ -1,5 +1,7 @@
 <template>
-        <v-footer class="secondary" padless>
+        <v-footer class="secondary"
+                  absolute="absolute"
+        >
             <v-col
                 class="text-center"
                 cols="12"
@@ -32,6 +34,7 @@ name: "footer-c",
                 'mdi-instagram',
                 'mdi-telegram',
             ],
+            absolute:true,
         }
     }
 }

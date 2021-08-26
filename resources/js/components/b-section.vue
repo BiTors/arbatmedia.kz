@@ -31,7 +31,7 @@
                     </v-row>
                     </v-col>
                 <div class="_mrg-btn footer text-center">
-                    <v-btn
+                    <v-btn  rel="nofollow" target="_blank"
                            color="var(blue)"
                            :href="options.link"
                     >

@@ -2,7 +2,7 @@
 <div>
     <div class=" _ms">
         <v-btn class="mx-2" elevation="0" small fab dark color="primary">
-            <img src="/img/send.svg" alt="" class="svs">
+            <img  src="/img/send.svg" alt="" class="svs">
         </v-btn>
     </div>
 </div>
