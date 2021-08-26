@@ -45,7 +45,9 @@ html{
 body{
     margin: 0;
 }
-
+.container{
+    min-height: 400px!important;
+}
 h2{
     text-align: center;
     color: #5f6162;
@@ -762,8 +764,14 @@ animation-fill-mode: both;
 ._back{
     background-color: var(--ba)!important;
 }
-._mrg-btn{
-    margin: 10px 0px;
+._mrg-btn {
+    padding: 10px 0px;
+}
+b{
+    background-color: #ffe3e2;
+    border-bottom: 2px solid #ff544c;
+    line-height: 27px;
+    font-weight: 500;
 }
 
 

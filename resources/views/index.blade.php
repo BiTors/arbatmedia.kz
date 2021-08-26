@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>Редакторсоке бюро dagna.kz</title>
+    <title></title>
     <!-- Fonts -->
 </head>
 <body>
     <div class="wrapper">
         <div id="app">
+
             <v-app class="cast-fonts">
                 <c-menu></c-menu>
                <router-view></router-view>

@@ -11,7 +11,9 @@ import Vue from 'vue';
 import Vuex from 'vuex';
 import VueRouter from 'vue-router';
 Vue.use(VueRouter);
+
 import routes from './routes';
+
 Vue.use(Vuex);
 
 
@@ -49,15 +51,22 @@ Vue.component('contacts', require('./components/contacts.vue').default);
 Vue.component('footer-c', require('./components/footer-c.vue').default);
 Vue.component('c-partner', require('./components/partner.vue').default);
 
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
+const Router = new VueRouter(routes)
+Router.beforeEach((to, from, next) => {
+    document.title = to.meta.title
+
+    next()
+});
 
 const app = new Vue({
     el: '#app',
-    router: new VueRouter(routes),
+    router: Router,
     store,
     vuetify,
 
