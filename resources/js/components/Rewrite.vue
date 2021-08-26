@@ -20,7 +20,7 @@
                             :disabled="textRewrite.length > 200 "
                             :loading="dialog"
                             class="white--text"
-                            color="purple darken-2"
+                            color="primary"
                             @click="sendRewrite(textRewrite)"
                         >
                            Перефразировать
@@ -34,12 +34,12 @@
                             <v-card
                                 color="primary"
                             >
-                                <v-card-text>
+                                <v-card-text
+                                    class="white--text">
                                    Идет обработка
                                     <v-progress-linear
                                         indeterminate
-                                        color="white"
-                                        class="mb-0"
+                                        class="mb-0 white--text"
                                     ></v-progress-linear>
                                 </v-card-text>
                             </v-card>
