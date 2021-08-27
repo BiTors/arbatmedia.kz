@@ -37,6 +37,9 @@ html{
 .v-application{
     background: #fff!important;
 }
+a {
+    text-decoration: none!important;
+}
 .fast-web{
     font-family: 'SegoeUI';
 }
