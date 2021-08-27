@@ -17,30 +17,31 @@
                     >
                         <v-list-item-group
                             v-model="group"
-                            active-class="deep-purple--text text--accent-4"
+                            active-class="primary--text text--accent-4"
+                            color="var(--mainColor)"
                         >
                             <v-list-item>
-                                <v-list-item-title><a @click="$router.push({name:'home'})" href="#one">ГЛАВНАЯ</a> </v-list-item-title>
+                                <v-list-item-title class="mm"><a @click="$router.push({name:'home'})" href="#one">ГЛАВНАЯ</a> </v-list-item-title>
                             </v-list-item>
 
 
                             <v-list-item>
-                                <v-list-item-title><a @click="$router.push({name:'home'})" href="#two">О НАС</a> </v-list-item-title>
+                                <v-list-item-title class="mm"><a @click="$router.push({name:'home'})" href="#two">О НАС</a> </v-list-item-title>
                             </v-list-item>
 
                             <v-list-item>
-                                <v-list-item-title><a @click="$router.push({name:'home'})" href="#three">УСЛУГИ</a></v-list-item-title>
+                                <v-list-item-title class="mm"><a @click="$router.push({name:'home'})" href="#three">УСЛУГИ</a></v-list-item-title>
                             </v-list-item>
 
                             <v-list-item>
-                                <v-list-item-title><a @click="$router.push({name:'home'})" href="#four">КАК МЫ РАБОТАЕМ</a></v-list-item-title>
+                                <v-list-item-title class="mm"><a @click="$router.push({name:'home'})" href="#four">КАК МЫ РАБОТАЕМ</a></v-list-item-title>
                             </v-list-item>
 
                             <v-list-item>
-                                <v-list-item-title><a @click="$router.push({name:'home'})" href="#five"> ПОРТФОЛИО</a></v-list-item-title>
+                                <v-list-item-title class="mm"><a @click="$router.push({name:'home'})" href="#five"> ПОРТФОЛИО</a></v-list-item-title>
                             </v-list-item>
                             <v-list-item>
-                                <v-list-item-title> <router-link :to="{ name: 'service'}">Сервисы</router-link></v-list-item-title>
+                                <v-list-item-title class="mm"> <router-link :to="{ name: 'service'}">СЕРВИСЫ</router-link></v-list-item-title>
                             </v-list-item>
                         </v-list-item-group>
                     </v-list>
