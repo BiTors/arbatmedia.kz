@@ -22,7 +22,7 @@
     font-style: normal;
     font-display: swap;
 }
-/*@font-face {
+@font-face {
     font-family: 'SegoeUI';
     src: url("/font/SegoeUI-Bold.woff2") format("woff2"),
     url("/font/SegoeUI-Bold.woff") format("woff"),
@@ -30,7 +30,7 @@
     font-weight: normal;
     font-style: normal;
     font-display: swap;
-}*/
+}
 html{
     scroll-behavior: smooth;
 }
