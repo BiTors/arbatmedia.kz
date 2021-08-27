@@ -1,6 +1,6 @@
 <template>
 <div>
-    <header></header>
+    <vue_header></vue_header>
     <a_sec></a_sec>
     <f_sec></f_sec>
     <portfolio></portfolio>
