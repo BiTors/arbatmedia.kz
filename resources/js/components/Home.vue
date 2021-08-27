@@ -7,7 +7,6 @@
     <partner></partner>
     <contacts></contacts>
     <b_sec></b_sec>
-    <steps></steps>
 </div>
 </template>
 
@@ -19,7 +18,6 @@ import portfolio from './portfolio.vue';
 import partner from './partner.vue';
 import b_sec from './b-section.vue';
 import contacts from './contacts.vue';
-import steps from './steps.vue';
 export default {
     name: "Home",
     components: {
@@ -29,7 +27,6 @@ export default {
         portfolio,
         partner,
         b_sec,
-        steps,
         contacts
     }
 }

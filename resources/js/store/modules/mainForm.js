@@ -149,6 +149,9 @@ export default {
             mutationClose(state){
                 state.dialog = false
                 state.single = false
+                state.base.b = ''
+                state.base.a = ''
+                state.msg = ''
             },
             TopForm(state,data){
                 state.dialog = true

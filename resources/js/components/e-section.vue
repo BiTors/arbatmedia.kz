@@ -45,7 +45,7 @@ export default {
         bottom: 0;
         right: 0;
         margin: 20px;
-        z-index: 2;
+        z-index: 4;
     }
     @media only screen and (max-width: 920px) {
         ._ms {

@@ -15,6 +15,7 @@
             <c_menu></c_menu>
             <router-view></router-view>
             <sec_e></sec_e>
+            <steps></steps>
             <footer_c></footer_c>
         </v-app>
     </div>

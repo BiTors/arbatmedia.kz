@@ -1,5 +1,6 @@
 <template>
     <div>
+
             <v-container id="two">
                 <div class="dt" >
                     <h2>О НАС</h2>
@@ -11,12 +12,16 @@
                          <div class="cot-a">{{one}}</div>
                      </v-col>
                      <v-col class="_a61">
+                         <v-lazy>
                          <img class="_a6i" src="/img/edit_1.webp" alt="Газиза Габи">
+                         </v-lazy>
                      </v-col>
                 </v-row>
                 <v-row class="mb-6 _med">
                     <v-col class="_a61 ">
+                        <v-lazy>
                         <img class="_a6i" src="/img/edit2.webp"  alt="Газиза Габи">
+                        </v-lazy>
                     </v-col>
                     <v-col class="_a6">
                         <div class="bts"><h2>А для чего?</h2></div>

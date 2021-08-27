@@ -1,6 +1,7 @@
 <template>
     <div>
-        <v-container id="five">
+        <v-lazy id="p_five">
+        <v-container >
         <div class="dt">
             <h2>ПОРТФОЛИО</h2>
             <div class="title-line"></div>
@@ -190,8 +191,10 @@
         </swiper>
 </div>
         </v-container>
+        </v-lazy>
         <div>
-            <v-container id="five">
+            <v-lazy>
+            <v-container>
                 <div class="_wr">
                     <div class="label">
                         <v-col class="_sub-t">
@@ -257,6 +260,7 @@
                     </v-col>
                 </v-row>
             </v-container>
+            </v-lazy>
         </div>
 
     </div>

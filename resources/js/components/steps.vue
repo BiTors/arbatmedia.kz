@@ -286,16 +286,26 @@ export default {
         },
         async  sendForm(){
             await this.sendFormBot({message:this.msg,name:this.formT,ser:this.getBase.b,subDer:this.subSelect});
+            this.empty()
         },
         close() {
-                this.formT.tel = ''
-                this.formT.wp = ''
-                this.formT.tg = ''
-                this.formT.vk = ''
-                this.formT.fb = ''
-                this.formT.Name = ''
-                this.subSelect=''
+                this.empty()
                 this.actionClose()
+        },
+        empty(){
+            this.formT.tel = ''
+            this.formT.wp = ''
+            this.formT.tg = ''
+            this.formT.vk = ''
+            this.formT.fb = ''
+            this.formT.Name = ''
+            this.subSelect=''
+            this.b2b_active = [],
+            this.form.tel = false,
+                this.form.wp = false,
+                this.form.tg = false,
+                this.form.vk = false,
+                this.form.fb = false
         }
     },
 }

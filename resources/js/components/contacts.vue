@@ -1,5 +1,6 @@
 <template>
     <div>
+        <v-lazy>
         <v-container>
         <section class="c-section">
             <div class="c-section-in fast-web">
@@ -47,6 +48,7 @@
             </div>
         </section>
         </v-container>
+        </v-lazy>
     </div>
 </template>
 
