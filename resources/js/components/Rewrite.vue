@@ -92,4 +92,7 @@ export default {
 ._a6{
     min-width: 300px;
 }
+.v-progress-linear{
+    background: white!important;
+}
 </style>
