@@ -3,7 +3,8 @@
     <v-container>
     <v-row class="mb-3">
         <v-col>
-            <div v-on:click="$router.push({name:'rewrite'})" class="step_work center">
+           <router-link class="al" :to="{ name: 'rewrite'}">
+            <div  class="step_work center">
                 <div class="im-d-cont b-ic">
                     <img src="/img/brain.svg"  alt="Рерайт текста онлайн" class="im-d">
                 </div>
@@ -17,6 +18,7 @@
                    AI
                 </div>
             </div>
+           </router-link>
         </v-col>
     </v-row>
     </v-container>
@@ -58,6 +60,10 @@ export default {
     font-family: system-ui;
     font-weight: 400;
     margin: 15px 0px;
+}
+.al{
+    text-decoration: none;
+    color: var(--mainText);
 }
 .num-d-cont{
     position: absolute;
