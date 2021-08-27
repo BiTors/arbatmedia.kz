@@ -47,7 +47,7 @@
                     <div class="title-line"></div>
                 </div>
 
-                        <d-section></d-section>
+                        <d_sec></d_sec>
                 <div class="dt" >
                     <h2>РЕДАКТОРСКОЕ БЮРО В ЦИФРАХ</h2>
                     <div class="title-line"></div>
@@ -120,8 +120,12 @@
 </template>
 
 <script>
+import d_sec from './d-section.vue';
 export default {
     name: "a-section",
+    components:{
+        d_sec
+    },
     data(){
         return{
             one:'Приветствую вас! Меня зовут Газиза Габи. На протяжении 6 лет работы с самыми разными видами текста, я изнутри изучала редакторскую кухню от глянца до крупного книжного издательства в стране. И весь опыт стал основой для создания редакторского бюро.',

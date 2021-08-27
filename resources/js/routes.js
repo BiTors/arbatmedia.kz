@@ -1,25 +1,18 @@
 
-import Home from './components/Home'
-import Rewrite from './components/Rewrite'
-import NotFound from './components/NotFound'
-import Service from './components/Service'
-
-
 export default {
     mode:'history',
     routes:[
         {
             path:'*',
-            component:NotFound,
+            component:() => import(/* webpackChunkName: "NotFound" */'./components/NotFound'),
             meta: {
                 title: 'Страницы не существует 404'
             }
-
         },
         {
             path:'/',
             name:'home',
-            component:Home,
+            component:() => import(/* webpackChunkName: "Home" */'./components/Home'),
             meta: {
                 title: 'Редакторское бюро dagna.kz'
             }
@@ -27,7 +20,7 @@ export default {
         {
             path:'/service',
             name:'service',
-            component:Service,
+            component:() => import(/* webpackChunkName: "Service" */'./components/Service'),
             meta: {
                 title: 'Сервисы dagna.kz'
             }
@@ -35,7 +28,7 @@ export default {
         {
             path:'/service/rewrite',
             name:'rewrite',
-            component:Rewrite,
+            component:() => import(/* webpackChunkName: "Rewrite" */'./components/Rewrite'),
             meta: {
                 title: 'Рерайт текста онлайн'
             }

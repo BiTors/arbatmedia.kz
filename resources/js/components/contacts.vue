@@ -17,7 +17,6 @@
                                 <div v-on:click=(arrow(1),slider(isActive)) class="arrow-b"></div>
                             </div>
                         </div>
-
                         <div v-if="check" class="slider-numb" :class="step">
                             <div v-on:click=(slider(0)) :class="[{active_step: isActive === 0},'_sli-n']">01</div>
                             <div v-on:click=(slider(1)) :class="[{active_step: isActive === 1},'_sli-n']">02</div>
@@ -34,25 +33,13 @@
                     <div class="slider-work">
                         <div class="slide-c" style="opacity: 1;">
                             <div class="box-slider">
-
                                <img src="/img/slide.png" alt="img" class="laptop">
                                 <div v-if="check" class="slider-numb-img" :class="steps">
                                     <div v-on:click=(slider(0)) :class="[{active_step: isActive === 0},'_sli-n-img']"><img  src="/img/reviews_01.jpg"  alt="img" class="im-a-img"></div>
                                     <div v-on:click=(slider(1)) :class="[{active_step: isActive === 1},'_sli-n-img']"><img  src="/img/reviews_02.jpg"  alt="img" class="im-a-img"></div>
                                     <div v-on:click=(slider(2)) :class="[{active_step: isActive === 2},'_sli-n-img']"><img  src="/img/reviews_03.jpg"  alt="img" class="im-a-img"></div>
                                     <div v-on:click=(slider(3)) :class="[{active_step: isActive === 3},'_sli-n-img']"><img  src="/img/reviews_04.jpg"  alt="img" class="im-a-img"></div>
-
-                                    <!--<img v-if="isActive === 0" src="/img/reviews_01.jpg"  alt="img" class="im-a">-->
                                 </div>
-                                <!--      <transition name="fade">
-                                         <img v-if="isActive === 1" src="/img/curse.png"  alt="img" class="im-a">
-                                     </transition>
-                                     <transition name="fade">
-                                         <img v-if="isActive === 2" src="/img/kinder.png"  alt="img" class="im-a">
-                                     </transition>
-                                     <transition name="fade">
-                                         <img v-if="isActive === 3" src="/img/fast.png"  alt="img" class="im-a">
-                                     </transition>-->
                             </div>
                         </div>
                     </div>
@@ -72,11 +59,6 @@ name: "contacts",
             steps:'step-a-img',
             check:Boolean,
             isActive:0,
-            cont:{
-                t:'Разработка тактики сплит-тестирования элементов',
-                c:'Чтобы точнее соответствовать ожиданиям вашей целевой аудитории мы предложим варианты тестирования отдельных элементов и текстов на посадочной страницы.',
-            }
-
         }
     },
     created() {
@@ -103,26 +85,18 @@ name: "contacts",
                 case 0: this.step = 'step-a'
                     this.steps = 'step-a-img';
                     this.isActive = 0
-                    this.cont.t ='Разработка тактики сплит-тестирования элементов'
-                    this.cont.c ='Чтобы точнее соответствовать ожиданиям вашей целевой аудитории мы предложим варианты тестирования отдельных элементов и текстов на посадочной страницы.'
                     break;
                 case 1: this.step = 'step-b'
                     this.steps = 'step-b-img';
                     this.isActive = 1
-                    this.cont.t ='Рекомендации по содержанию, качеству фото- и видео для сайта'
-                    this.cont.c ='Фото и Видеоконтент, которые отлично работали ещё 1 год назад, уже не так эффективны. Мы подготовим рекомендации по наполнению лендинга актуальными и релевантными материалами.'
                     break;
                 case 2: this.step = 'step-c'
                     this.steps = 'step-c-img';
                     this.isActive = 2
-                    this.cont.t ='Рекомендации по содержанию, качеству фото и видео для сайта'
-                    this.cont.c ='Фото и Видеоконтент, которые отлично работали ещё 1 год назад, уже не так эффективны. Мы подготовим рекомендации по наполнению лендинга актуальными и релевантными материалами.'
                     break;
                 case 3: this.step = 'step-d'
                     this.steps = 'step-d-img';
                     this.isActive = 3
-                    this.cont.t ='Рекомендации по содержанию, качеству фото и видео для сайта'
-                    this.cont.c ='Фото и Видеоконтент, которые отлично работали ещё 1 год назад, уже не так эффективны. Мы подготовим рекомендации по наполнению лендинга актуальными и релевантными материалами.'
                     break;
             }
         }

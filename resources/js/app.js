@@ -33,23 +33,8 @@ import vuetify from './plugins/vuetify'
  * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
  */
 
-// const files = require.context('./', true, /\.vue$/i)
-// files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 Vue.component('c-menu', require('./components/Menu.vue').default);
-Vue.component('c-home', require('./components/Home.vue').default);
-Vue.component('c-rewrite', require('./components/Rewrite.vue').default);
-Vue.component('v-header', require('./components/v-header.vue').default);
-Vue.component('a-section', require('./components/a-section.vue').default);
-Vue.component('b-section', require('./components/b-section.vue').default);
-Vue.component('c-section', require('./components/c-section.vue').default);
-Vue.component('d-section', require('./components/d-section.vue').default);
-Vue.component('e-section', require('./components/e-section.vue').default);
-Vue.component('steps', require('./components/steps.vue').default);
-Vue.component('f-section', require('./components/f-section.vue').default);
-Vue.component('portfolio', require('./components/portfolio.vue').default);
-Vue.component('contacts', require('./components/contacts.vue').default);
 Vue.component('footer-c', require('./components/footer-c.vue').default);
-Vue.component('c-partner', require('./components/partner.vue').default);
 
 
 /**

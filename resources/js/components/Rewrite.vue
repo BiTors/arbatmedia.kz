@@ -8,7 +8,6 @@
             <v-row  class="">
                 <v-col  md-6 class="_a6 ">
                         <v-textarea
-                            counter
                             label="Ведите текст для рерайта"
                             :rules="rules"
                             :value="value"
@@ -45,7 +44,6 @@
                             </v-card>
                         </v-dialog>
                     </div>
-
                 </v-col>
                 <v-col md-6 class="_a6 ">
                     <div></div>
@@ -87,8 +85,6 @@ export default {
             }
         }
     },
-
-
 }
 </script>
 
