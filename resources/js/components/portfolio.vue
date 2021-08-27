@@ -49,11 +49,9 @@
                             <span>Редактирование</span>
                         </v-tooltip>
                     </div>
-
                     <div class="image-wrapper">
                         <div class="_c"></div>
                         <img class="_w" src="/img/metr.png" alt="Как я создал метры">
-
                     </div>
                 </div>
             </swiper-slide>
@@ -97,7 +95,6 @@
                     <div class="image-wrapper">
                         <div class="_c"></div>
                         <img class="_w" src="/img/rmm.png" alt="Как я создал метры">
-
                     </div>
                 </div>
             </swiper-slide>
@@ -141,7 +138,6 @@
                     <div class="image-wrapper">
                         <div class="_c"></div>
                         <img class="_w" src="/img/sav.png" alt="Как я создал метры">
-
                     </div>
                 </div>
             </swiper-slide>
@@ -185,11 +181,9 @@
                     <div class="image-wrapper">
                         <div class="_c"></div>
                         <img class="_w" src="/img/dn.png" alt="Как я создал метры">
-
                     </div>
                 </div>
             </swiper-slide>
-
             <div class="swiper-button-prev" slot="button-prev"></div>
             <div class="swiper-button-next" slot="button-next"></div>
             <div class="swiper-pagination" slot="pagination"></div>
@@ -197,7 +191,6 @@
 </div>
         </v-container>
         <div>
-            <v-lazy>
             <v-container id="five">
                 <div class="_wr">
                     <div class="label">
@@ -215,7 +208,6 @@
                                     <v-btn @click="portfolio(0)" class="white--text" color="var(--blue)">Подробнее</v-btn>
                                 </div>
                             </div>
-
                         </div>
                     </swiper-slide>
                     <swiper-slide>
@@ -265,7 +257,6 @@
                     </v-col>
                 </v-row>
             </v-container>
-            </v-lazy>
         </div>
 
     </div>
