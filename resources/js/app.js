@@ -33,8 +33,8 @@ import vuetify from './plugins/vuetify'
  * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
  */
 
-Vue.component('c-menu', require('./components/Menu.vue').default);
-Vue.component('footer-c', require('./components/footer-c.vue').default);
+Vue.component('c_menu', () => import('./components/Menu.vue'));
+Vue.component('footer_c', () => import('./components/footer-c.vue'));
 
 
 /**

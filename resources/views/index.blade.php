@@ -12,9 +12,9 @@
 <div class="wrapper">
     <div id="app">
         <v-app class="cast-fonts">
-            <c-menu></c-menu>
+            <c_menu></c_menu>
             <router-view></router-view>
-            <footer-c></footer-c>
+            <footer_c></footer_c>
         </v-app>
     </div>
 </div>
