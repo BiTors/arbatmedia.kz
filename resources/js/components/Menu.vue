@@ -40,7 +40,7 @@
                                 <v-list-item-title><a @click="$router.push({name:'home'})" href="#five"> ПОРТФОЛИО</a></v-list-item-title>
                             </v-list-item>
                             <v-list-item>
-                                <v-list-item-title><a @click="$router.push({name:'service'})">СЕРВИСЫ</a></v-list-item-title>
+                                <v-list-item-title> <router-link :to="{ name: 'service'}">Сервисы</router-link></v-list-item-title>
                             </v-list-item>
                         </v-list-item-group>
                     </v-list>
@@ -54,7 +54,7 @@
                         <li class="mm"><a @click="$router.push({name:'home'})" href="#three">Услуги</a></li>
                         <li class="mm"><a @click="$router.push({name:'home'})" href="#four">Как мы работаем</a></li>
                         <li class="mm"><a @click="$router.push({name:'home'})" href="#five">Портфолио</a></li>
-                        <li class="mm"><a @click="$router.push({name:'service'})">Сервисы</a></li>
+                        <li class="mm"><router-link :to="{ name: 'service'}">Сервисы</router-link></li>
                     </ul>
                 </nav>
             </div>
