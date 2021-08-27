@@ -22,8 +22,12 @@ export default {
         title:'',
         load:false,
         text:'',
+        single:false
     },
     getters: {
+        getSingle(state){
+          return state.single
+        },
         getWork(state) {
             return state.work
         },
@@ -99,6 +103,9 @@ export default {
             actionFormService(cot,data){
                     cot.commit('TopForm',data);
                 },
+            actionSingle(cot){
+                    cot.commit('mSingle');
+                },
             /*portfolio*/
                 actionWork(cot,data){
                     cot.commit('setWork',data);
@@ -111,9 +118,14 @@ export default {
 
 
         mutations: {
+        mSingle(state){
+            state.single = !state.single
+            state.dialog = !state.dialog
+        },
             sendFormBotMounted(state,id){
                 state.text = id.name['Name']+', мы свяжемся с вами в ближайшее время.'
                 state.dialog = false
+                state.single = false
                 state.snackbars = true
             },
             mA(state){
@@ -123,7 +135,6 @@ export default {
                 state.snackbars = false
             },
             setSend(state,id){
-
                 state.text = id.name+', мы свяжемся с вами в ближайшее время.'
                 state.snackbars = true
             },
@@ -137,6 +148,7 @@ export default {
             },
             mutationClose(state){
                 state.dialog = false
+                state.single = false
             },
             TopForm(state,data){
                 state.dialog = true

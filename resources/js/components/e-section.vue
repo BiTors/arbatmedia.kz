@@ -1,7 +1,7 @@
 <template>
 <div>
     <div class=" _ms">
-        <v-btn class="mx-2" elevation="0" small fab dark color="primary">
+        <v-btn v-on:click="send()" :loading="active" class="mx-2" elevation="0" small fab dark color="primary">
             <img  src="/img/send.svg" alt="" class="svs">
         </v-btn>
     </div>
@@ -10,26 +10,27 @@
 
 <script>
 
-import {mapActions} from "vuex";
+import {mapActions, mapGetters} from "vuex";
 
 export default {
     name: "e-section",
     data(){
         return{
+            active:false,
             soc: {
                 a:0,
                 b:1
             },
         }
     },
-    computed:{
-
+    computed: {
+        ...mapGetters({getDialog:'getDialog',}),
     },
     methods:{
-        ...mapActions({actionAds:'actionAds'}),
-        popups(e){
-          //  this.actionAds({'total':a,'plan':b,'dialog':true,product:'landing page'})
-        }
+        ...mapActions({actionSingle:'actionSingle'}),
+        send(){
+            this.actionSingle()
+        },
     },
 }
 </script>
@@ -44,7 +45,7 @@ export default {
         bottom: 0;
         right: 0;
         margin: 20px;
-        z-index: 9999;
+        z-index: 2;
     }
     @media only screen and (max-width: 920px) {
         ._ms {

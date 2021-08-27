@@ -17,12 +17,18 @@
              </v-card-title>
              <v-col  class="font-weight-bold text-center  text-uppercase" md="6" offset-md="3">
                      <v-col class="_title">
-                         {{getTitle}}
+                         <div v-if="getSingle">
+                             ДЛЯ ЗАКАЗА УСЛУГ ИЛИ КОНСУЛЬТАЦИИ, ЗАПОЛНИТЕ ФОРМУ НИЖЕ.
+                         </div>
+                         <div v-else>
+                             {{getTitle}}
+                         </div>
                      </v-col>
              </v-col>
              <v-col class="_wr-back" md="6" offset-md="3">
              <v-col class="font-weight-bold text-center  text-uppercase" md="10" offset-md="1">
-                 Для расчета цены и заказа услуг, заполните форму ниже.
+                 <div v-if="getSingle"></div>
+                 <div v-else>Для расчета цены и заказа услуг, заполните форму ниже.</div>
              </v-col>
              <v-col class="form-b vf">
                  <v-text-field
@@ -118,12 +124,12 @@
                      required>
                  </v-text-field>
              </v-col>
-             <v-col v-if="getOptions.a === false" class=" text-subtitle-2 text-center  text-uppercase" md="10" offset-md="1">
-                 <div v-if="getOptions.b === 0">Выберите вид консультации, которую вы хотите получить от Газизы Габи:</div>
-                 <div v-if="getOptions.b === 1">Выберите вид продающего текста, который вам нужен:</div>
-                 <div v-if="getOptions.b === 2">Верите языковую пару для перевода: Переводы с русского на казахский:</div>
+             <v-col v-if="getOptions.a === false && getSingle === false" class=" text-subtitle-2 text-center  text-uppercase" md="10" offset-md="1">
+                 <div v-if="getOptions.b === 0 && getSingle === false">Выберите вид консультации, которую вы хотите получить от Газизы Габи:</div>
+                 <div v-if="getOptions.b === 1 && getSingle === false">Выберите вид продающего текста, который вам нужен:</div>
+                 <div v-if="getOptions.b === 2 && getSingle === false">Верите языковую пару для перевода: Переводы с русского на казахский:</div>
                  <v-col  dense class=" vf form-b">
-                     <v-select v-if="getOptions.b === 1"
+                     <v-select v-if="getOptions.b === 1 && getSingle === false"
                          :items="service['options_one']"
                          v-model="subSelect"
                          label="Выберете услугу"
@@ -132,7 +138,7 @@
                          color="blue"
                          required
                      ></v-select>
-                     <v-select v-if="getOptions.b === 0"
+                     <v-select v-if="getOptions.b === 0 && getSingle === false"
                                :items="service['options_two']"
                                v-model="subSelect"
                                label="Выберете услугу"
@@ -141,7 +147,7 @@
                                color="blue"
                                required
                      ></v-select>
-                     <v-select v-if="getOptions.b === 2"
+                     <v-select v-if="getOptions.b === 2 && getSingle === false"
                                :items="service['options_free']"
                                v-model="subSelect"
                                label="Выберете услугу"
@@ -153,15 +159,22 @@
                  </v-col>
              </v-col>
              <v-col class=" text-subtitle-2 text-center  text-uppercase" md="10" offset-md="1">
-                 Комментарий к заказу:
-
+                 <div v-if="getSingle">Ваше сообщение:</div>
+                 <div v-else>Комментарий к заказу:</div>
              <v-col  dense class=" vf form-b">
-                 <v-textarea
+                 <v-textarea v-if="getSingle === true"
                      outlined
                      color="blue"
                      v-model="msg"
                      name="input-7-4"
-                     label="Комментарий к заказу"
+                     label="Ваше сообщение"
+                 ></v-textarea>
+                 <v-textarea v-if="getSingle === false"
+                             outlined
+                             color="blue"
+                             v-model="msg"
+                             name="input-7-4"
+                             label="Комментарий к заказу"
                  ></v-textarea>
              </v-col>
              </v-col>
@@ -255,7 +268,7 @@ export default {
 
     },
     computed: {
-        ...mapGetters({getLoad:'getLoad',gSnackbar:'gSnackbar',getDialog:'getDialog',getBase:'getBase',getMsg:'getMsg',getOptions:'getOptions',getTitle:'getTitle',getText:'getText'}),
+        ...mapGetters({getSingle:'getSingle',getLoad:'getLoad',gSnackbar:'gSnackbar',getDialog:'getDialog',getBase:'getBase',getMsg:'getMsg',getOptions:'getOptions',getTitle:'getTitle',getText:'getText'}),
         isDisable() {
             this.msg = this.getMsg
        if(this.formT.Name.length > 0 && this.formT.Name.length <= 30){

@@ -34,7 +34,9 @@ import vuetify from './plugins/vuetify'
  */
 
 Vue.component('c_menu', () => import('./components/Menu.vue'));
+Vue.component('sec_e', () => import('./components/e-section.vue'));
 Vue.component('footer_c', () => import('./components/footer-c.vue'));
+
 
 
 /**

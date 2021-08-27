@@ -2,7 +2,7 @@
     <div>
         <v-row class="mb-3">
             <v-col>
-                    <div v-on:click="send(edit,'Редактирование',true,9)" :loading="active" class="step_work center">
+                    <div v-on:click="send(edit,'Обратная связь',true,9)" :loading="active" class="step_work center">
                         <div class="im-d-cont b-ic">
                             <img src="/img/1.svg"  alt="Редактирование" class="im-d">
                         </div>
