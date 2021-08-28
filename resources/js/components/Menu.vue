@@ -58,11 +58,11 @@
             <div class="v-header">
                 <nav class="nav-top">
                     <ul class="navbar-nav">
-                        <li class="mm active"><a href="/#one">Главная</a></li>
-                        <li class="mm"><a href="/#two">О нас</a></li>
-                        <li class="mm"><a href="/#three">Услуги</a></li>
-                        <li class="mm"><a href="/#four">Как мы работаем</a></li>
-                        <li class="mm"><a href="/#p_five">Портфолио</a></li>
+                        <li class="mm active"><router-link :to="{ path: '/', hash: '#one' }">Главная</router-link></li>
+                        <li class="mm"><router-link :to="{ path: '/', hash: '#two' }">О нас</router-link></li>
+                        <li class="mm"><router-link :to="{ path: '/', hash: '#three' }">Услуги</router-link></li>
+                        <li class="mm"><router-link :to="{ path: '/', hash: '#four' }">Как мы работаем</router-link></li>
+                        <li class="mm"><router-link :to="{ path: '/', hash: '#p_five' }"> Портфолио</router-link></li>
                         <li class="mm"><router-link :to="{ name: 'service'}">Сервисы</router-link></li>
                     </ul>
                 </nav>
