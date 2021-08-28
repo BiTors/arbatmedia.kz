@@ -9,10 +9,10 @@
                     <img src="/img/brain.svg"  alt="Рерайт текста онлайн" class="im-d">
                 </div>
                 <div class="title-d-cont">
-                    Рерайт онлайн
+                    Re-DAGNA
                 </div>
                 <div class="body-d-cont">
-                    Онлайн иснтрумент для перефразирования текста онлайн с помощью ИИ
+                    Онлайн-сервис для перефразирования текста с помощью ИИ
                 </div>
                 <div color="" class=" num-d-cont">
                    AI
