@@ -1,6 +1,6 @@
 <template>
     <div>
-        <v-lazy>
+
         <v-container>
         <section class="c-section">
             <div class="c-section-in fast-web">
@@ -34,12 +34,16 @@
                     <div class="slider-work">
                         <div class="slide-c" style="opacity: 1;">
                             <div class="box-slider">
-                               <img src="/img/slide.png" alt="img" class="laptop">
+                                <v-lazy>
+                                    <img src="/img/slide.png" alt="img" class="laptop">
+                                </v-lazy>
                                 <div v-if="check" class="slider-numb-img" :class="steps">
+                                    <v-lazy>
                                     <div v-on:click=(slider(0)) :class="[{active_step: isActive === 0},'_sli-n-img']"><img  src="/img/reviews_01.jpg"  alt="img" class="im-a-img"></div>
                                     <div v-on:click=(slider(1)) :class="[{active_step: isActive === 1},'_sli-n-img']"><img  src="/img/reviews_02.jpg"  alt="img" class="im-a-img"></div>
                                     <div v-on:click=(slider(2)) :class="[{active_step: isActive === 2},'_sli-n-img']"><img  src="/img/reviews_03.jpg"  alt="img" class="im-a-img"></div>
                                     <div v-on:click=(slider(3)) :class="[{active_step: isActive === 3},'_sli-n-img']"><img  src="/img/reviews_04.jpg"  alt="img" class="im-a-img"></div>
+                                    </v-lazy>
                                 </div>
                             </div>
                         </div>
@@ -48,7 +52,6 @@
             </div>
         </section>
         </v-container>
-        </v-lazy>
     </div>
 </template>
 
