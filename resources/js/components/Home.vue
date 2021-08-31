@@ -20,6 +20,19 @@ import b_sec from './b-section.vue';
 import contacts from './contacts.vue';
 export default {
     name: "Home",
+    metaInfo() {
+        return {
+            title: "Редакторское бюро DAGNA",
+            meta: [
+                { charset: 'utf-8' },
+                { name: 'description', content:  'Услуги профессиональных редакторов по редактированию текстов любой сложности, книг, рукописей, статей и других материалов.'},
+                { property: 'og:title', content: "Редакторское бюро DAGNA"},
+                { property: 'og:site_name', content: 'dagna.kz'},
+                {property: 'og:type', content: 'website'},
+                {name: 'robots', content: 'index,follow'}
+            ]
+        }
+    },
     components: {
         vue_header,
         a_sec,

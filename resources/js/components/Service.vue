@@ -27,7 +27,20 @@
 
 <script>
 export default {
-    name: "Service"
+    name: "Service",
+    metaInfo() {
+        return {
+            title: "Сервисы DAGNA.KZ",
+            meta: [
+                { charset: 'utf-8' },
+                { name: 'description', content:  'Сервисы для работы с текстами онлайн - DAGNA.KZ'},
+                { property: 'og:title', content: "Сервисы DAGNA.KZ"},
+                { property: 'og:site_name', content: 'dagna.kz'},
+                {property: 'og:type', content: 'website'},
+                {name: 'robots', content: 'index,follow'}
+            ]
+        }
+    },
 }
 </script>
 

@@ -58,6 +58,19 @@
 import {mapActions, mapGetters} from "vuex";
 export default {
     name: "Rewrite",
+    metaInfo() {
+        return {
+            title: "Re-DAGNA рерайт текста онлайн",
+            meta: [
+                { charset: 'utf-8' },
+                { name: 'description', content:  'Онлайн-сервис для перефразирования текста с помощью ИИ'},
+                { property: 'og:title', content: "Re-DAGNA рерайт текста онлайн"},
+                { property: 'og:site_name', content: 'dagna.kz'},
+                {property: 'og:type', content: 'website'},
+                {name: 'robots', content: 'index,follow'}
+            ]
+        }
+    },
     data(){
         return{
             dialog:false,

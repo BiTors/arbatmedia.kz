@@ -10,13 +10,11 @@ require('./bootstrap');
 import Vue from 'vue';
 import Vuex from 'vuex';
 import VueRouter from 'vue-router';
+import VueMeta from 'vue-meta'
 Vue.use(VueRouter);
-
 import routes from './routes';
-
 Vue.use(Vuex);
-
-
+Vue.use(VueMeta)
 import Store from "./store/index";
 const store = new Vuex.Store(
     Store
