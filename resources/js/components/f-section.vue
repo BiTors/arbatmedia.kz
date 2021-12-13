@@ -1,70 +1,45 @@
 <template>
     <div>
-        <div class="dt" id="four">
-            <h2>КАК МЫ РАБОТАЕМ</h2>
-            <div class="title-line"></div>
-        </div>
-        <v-container>
-        <v-row  class="mb-4">
-            <v-col class="_a6">
-                <div class="_ss" style="text-align: center;">
-                    <div class="_mih">
-                        <img class="_imw" src="/img/message.svg" alt="">
-                    </div>
-                    <div>
-                        <div class="title-d-cont">
-                            Заявка
-                        </div>
-                        <div class="_stw">
-                            Вы выбираете услугу и заполняете форму заявки.
-                        </div>
-                    </div>
+
+        <v-container style="margin-top: 120px;">
+        <v-row  class="mb-3">
+            <v-col mb="4" xl="4" lg="4">
+                <div class="ry">
+                    <img src="/img/rybakov.jpg" alt="Игорь Рыбаков">
                 </div>
             </v-col>
-            <v-col class="_a6">
-                <div class="_ss" style="text-align: center;">
-                    <div class="_mih">
-                        <img class="_imw" src="/img/man.svg" alt="">
-                    </div>
-                    <div>
-                        <div class="title-d-cont">
-                            Менеджер
-                        </div>
-                        <div class="_stw">
-                            Наш менеджер обработает заявку, подготовит КП и свяжется с вами для обсуждения деталей и подготовки ТЗ.
-                        </div>
-                    </div>
+            <v-col class="item-info-b2" mb="6"
+                   xl="6"
+                   lg="6">
+                <h2> Игорь Рыбаков <br> 47 жас</h2>
+                <div class="cot-a">
+                    <p>“Кәсіпкердің рөлі – әлемнің дамуына және одан әрі көркеюіне
+                    жеткіліксіз нәрсені қосу. Мен өз борышымды осы деп білемін!„©</p>
+
+                    <p> Игорь Рыбаков - ресейлік кәсіпкер, венчурлік инвестор, филантроп,
+                    Forbes журналының нұсқасы бойынша Ресейдің ең бай адамдар
+                    тізімінің қатысушы (№78 орын). Әлемнің 7 елінің 54 зауыты
+                    тиесілі «ТЕХНОНИКОЛЬ» корпорациясының негізін салушы және
+                    иеленушілерінің бірі. Экономикалық дамудың үдеу
+                    Институтының (Рыбаков Фонд), сондай-ақ ол «Эквиум
+                    бизнес-клубының, және SOK смарт-офистерінің иесі.
+                    Larix атты венчурлік фондтың және PryTek компаниялар тобын
+                    негіздеушілердің бірі. Ақшалай қаражатты басқаруының жалпы
+                    сомасы – $200 миллион. Инвестициялаңған жобалар
+                    саны – 50-ден асады.</p>
+
+
+                    <p>World chess инвесторы, шахмат ойынын көпшілікке насихаттаумен
+                    белсенді түрде айналысуда, Ресейде филантропияны танымал етуші.
+                    Филантропия саласындағы жобаларды бастап, жүзеге асыруды
+                    өңдейтін – Legacy Endowment Foundation ұйымының негізін
+                    қалаушылардың бірі. YouTube, Instagram, Telegram желілеріндегі
+                    арналарын жүргізетін алғаш ресейлік миллиардер-блогер.</p>
+
                 </div>
             </v-col>
-            <v-col class="_a6">
-                <div class="_ss" style="text-align: center;">
-                    <div class="_mih">
-                        <img class="_imw" src="/img/folder.svg" alt="">
-                    </div>
-                    <div>
-                        <div class="title-d-cont">
-                            Процесс работы
-                        </div>
-                        <div class="_stw">
-                            Мы выполняем работу в соответствии с ТЗ, высылаем на согласование, вносим правки до трех этапов.
-                        </div>
-                    </div>
-                </div>
-            </v-col>
-            <v-col class="_a6">
-                <div class="_ss" style="text-align: center;">
-                    <div class="_mih">
-                        <img class="_imw" src="/img/complate.svg" alt="">
-                    </div>
-                    <div>
-                        <div class="title-d-cont">
-                           Результат
-                        </div>
-                        <div class="_stw">
-                            Ваш текст готов!
-                        </div>
-                    </div>
-                </div>
+            <v-col  mb="2" xl="2" lg="2">
+                <div class="rb"></div>
             </v-col>
         </v-row>
         </v-container>
@@ -78,24 +53,59 @@ export default {
 </script>
 
 <style scoped>
+.cot-a{
+    color: #C4C4C4;
+}
+.cot-a>p{
+    margin: 53px 0px 0px;
+}
+.item-info-b2{
+    position: relative;
+    bottom: 120px;
+}
+.rb{
+    background: white;
+    height: 100%;
+    position: relative;
+    max-height: 360px;
+}
+
+.rb::before{
+    content: "";
+    display: block;
+    width: 380px;
+    height: 100%;
+    background: #FFF;
+    position: absolute;
+    top: 0px;
+    left: 99.9%;
+}
+.ry>img{
+    max-width: 360px;
+
+}
+.ry::after{
+    content: "";
+    display: block;
+    width: 380px;
+    height: 100%;
+    background: #FFF;
+    position: absolute;
+    top: 0px;
+    right: 99.9%;
+}
+
+.ry{
+    position: relative;
+    max-height: 420px;
+    text-align: right;
+    background: #fff;
+}
 .title-d-cont/deep/{
     color: #5f6162;
     font-size: 1.3rem;
     margin: 10px 0px;
     font-family: 'SegoeUI';
 }
-._a6{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-._imw{
-    width: 65px;
-}
-._mih{
-    min-height: 75px;
-}
-._stw{
-    font-size: var(--size);
-}
+
 </style>

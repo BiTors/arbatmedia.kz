@@ -1,12 +1,11 @@
 <template>
         <v-footer class="secondary"
-                  absolute="absolute"
+
         >
             <v-col
                 class="text-center"
                 cols="12"
             >
-
                 <v-card-text>
                     <v-btn
                         v-for="icon in icons"

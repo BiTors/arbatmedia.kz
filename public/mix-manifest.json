@@ -1,4 +1,8 @@
 {
-    "/js/app.js": "/js/app.js?id=b97d794a71906dddd9dc",
-    "/css/app.css": "/css/app.css?id=304000ded5769280db02"
+    "/js/app.js": "/js/app.js?id=da044b2a1bb9c6332259",
+    "/js/split/NotFound.js": "/js/split/NotFound.js?id=1d85812611028d2a105c",
+    "/js/split/Home.js": "/js/split/Home.js?id=4a465bb89d8475b7884a",
+    "/js/split/Service.js": "/js/split/Service.js?id=6f1364c73ccc2683eb47",
+    "/js/split/Rewrite.js": "/js/split/Rewrite.js?id=8da7c6d43767be05b29e",
+    "/css/app.css": "/css/app.css?id=3fb4c119c6a77c8e6f90"
 }

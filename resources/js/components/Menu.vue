@@ -3,7 +3,7 @@
     <div class="v-headers">
         <div class="header-panel ">
             <div class="logo">
-                <router-link to="/">  <img class="img-logo" src="/img/dagna.png" alt=""></router-link>
+                <router-link to="/">  <img class="img-logo" src="/img/logo-arbat.png" alt=""></router-link>
             </div>
             <nav class="nav-top-m">
                 <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
@@ -22,35 +22,21 @@
                         >
                             <a  href="/#one">
                                 <v-list-item>
-                                    <v-list-item-title class="mm">ГЛАВНАЯ</v-list-item-title>
+                                    <v-list-item-title class="mm">АВТОР ТУРАЛЫ</v-list-item-title>
                                 </v-list-item>
                             </a>
 
                             <a  href="/#two">
                                 <v-list-item>
-                                    <v-list-item-title class="mm">О НАС</v-list-item-title>
+                                    <v-list-item-title class="mm">КІТАП ТУРАЛЫ</v-list-item-title>
                                 </v-list-item>
                             </a>
                             <a  href="/#three">
                                 <v-list-item>
-                                    <v-list-item-title class="mm">УСЛУГИ</v-list-item-title>
+                                    <v-list-item-title class="mm">САТЫП АЛУ</v-list-item-title>
                                 </v-list-item>
                             </a>
-                            <a  href="/#four">
-                                <v-list-item>
-                                    <v-list-item-title class="mm">КАК МЫ РАБОТАЕМ</v-list-item-title>
-                                </v-list-item>
-                            </a>
-                            <a href="/#p_five">
-                                <v-list-item>
-                                    <v-list-item-title class="mm"> ПОРТФОЛИО</v-list-item-title>
-                                </v-list-item>
-                            </a>
-                            <router-link :to="{ name: 'service'}">
-                                <v-list-item>
-                                    <v-list-item-title class="mm"> СЕРВИСЫ</v-list-item-title>
-                                </v-list-item>
-                            </router-link>
+
                         </v-list-item-group>
                     </v-list>
                 </v-navigation-drawer>
@@ -58,14 +44,18 @@
             <div class="v-header">
                 <nav class="nav-top">
                     <ul class="navbar-nav">
-                        <li class="mm active"><router-link :to="{ path: '/', hash: '#one' }">Главная</router-link></li>
-                        <li class="mm"><router-link :to="{ path: '/', hash: '#two' }">О нас</router-link></li>
-                        <li class="mm"><router-link :to="{ path: '/', hash: '#three' }">Услуги</router-link></li>
-                        <li class="mm"><router-link :to="{ path: '/', hash: '#four' }">Как мы работаем</router-link></li>
-                        <li class="mm"><router-link :to="{ path: '/', hash: '#p_five' }"> Портфолио</router-link></li>
-                        <li class="mm"><router-link :to="{ name: 'service'}">Сервисы</router-link></li>
+                        <li class="mm active"><router-link :to="{ path: '/', hash: '#one' }">АВТОР ТУРАЛЫ</router-link></li>
+                        <li class="mm"><router-link :to="{ path: '/', hash: '#two' }">КІТАП ТУРАЛЫ</router-link></li>
+                        <li class="mm"><router-link :to="{ path: '/', hash: '#three' }">САТЫП АЛУ</router-link></li>
                     </ul>
                 </nav>
+            </div>
+            <div class="v-info">
+                <div class="soc">
+                    <a href="#"><img class="soc-im" src="/img/facebook.png" alt=""></a>
+                    <a href="#"><img class="soc-im" src="/img/youtube.png" alt=""></a>
+                    <a href="#"><img class="soc-im" src="/img/instagram.png" alt=""></a>
+                </div>
             </div>
         </div>
     </div>
@@ -90,6 +80,23 @@ export default {
 </script>
 
 <style scoped>
+.v-info{
+    width: 160px;
+}
+.soc{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    width: 120px;
+    float: right;
+}
+.soc>a{
+    padding: 0px 5px;
+}
+.soc-im{
+    max-width: 25px;
+}
 @keyframes rotation {
     0% {
         transform:rotate(0deg);
@@ -100,7 +107,7 @@ export default {
 }
 
 .mm>a{
-    color: var(--mainText);
+    color: #525254;
     margin: 0px 10px;
 }
 form{

@@ -5,7 +5,6 @@
     <f_sec></f_sec>
     <portfolio></portfolio>
     <partner></partner>
-    <contacts></contacts>
     <b_sec></b_sec>
 </div>
 </template>
