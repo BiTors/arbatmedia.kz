@@ -2,8 +2,9 @@
 <div>
     <div class=" _ms">
         <v-btn v-on:click="send()" :loading="active" class="mx-2" elevation="0" small fab dark color="primary">
-            <img  src="/img/send.svg" alt="" class="svs">
+            <v-icon>mdi-cart-plus</v-icon>
         </v-btn>
+
     </div>
 </div>
 </template>
@@ -68,4 +69,7 @@ export default {
             width: 20px;
         }
     }
+._ms{
+    z-index: 999;
+}
 </style>

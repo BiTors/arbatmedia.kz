@@ -20,18 +20,18 @@
                             active-class="primary--text text--accent-4"
                             color="var(--mainColor)"
                         >
-                            <a  href="/#one">
+                            <a  v-scroll-to="'#author'" href="#">
                                 <v-list-item>
                                     <v-list-item-title class="mm">АВТОР ТУРАЛЫ</v-list-item-title>
                                 </v-list-item>
                             </a>
 
-                            <a  href="/#two">
+                            <a  v-scroll-to="'#book'" href="#">
                                 <v-list-item>
                                     <v-list-item-title class="mm">КІТАП ТУРАЛЫ</v-list-item-title>
                                 </v-list-item>
                             </a>
-                            <a  href="/#three">
+                            <a  v-scroll-to="'#pay'" href="#">
                                 <v-list-item>
                                     <v-list-item-title class="mm">САТЫП АЛУ</v-list-item-title>
                                 </v-list-item>
@@ -44,17 +44,26 @@
             <div class="v-header">
                 <nav class="nav-top">
                     <ul class="navbar-nav">
-                        <li class="mm active"><router-link :to="{ path: '/', hash: '#one' }">АВТОР ТУРАЛЫ</router-link></li>
-                        <li class="mm"><router-link :to="{ path: '/', hash: '#two' }">КІТАП ТУРАЛЫ</router-link></li>
-                        <li class="mm"><router-link :to="{ path: '/', hash: '#three' }">САТЫП АЛУ</router-link></li>
+                        <li class="mm active"><router-link to="#"  v-scroll-to="'#author'">АВТОР ТУРАЛЫ</router-link></li>
+                        <li class="mm"><router-link to="#"  v-scroll-to="'#book'">КІТАП ТУРАЛЫ</router-link></li>
+                        <li class="mm"><router-link to="#"  v-scroll-to="'#pay'">САТЫП АЛУ</router-link></li>
                     </ul>
                 </nav>
             </div>
             <div class="v-info">
                 <div class="soc">
-                    <a href="#"><img class="soc-im" src="/img/facebook.png" alt=""></a>
-                    <a href="#"><img class="soc-im" src="/img/youtube.png" alt=""></a>
-                    <a href="#"><img class="soc-im" src="/img/instagram.png" alt=""></a>
+                    <v-card-text>
+                        <v-btn
+                            v-for="icon in icons"
+                            :key="icon"
+                            class="socs mx-4 white--text"
+                            icon
+                        >
+                            <v-icon >
+                                {{ icon }}
+                            </v-icon>
+                        </v-btn>
+                    </v-card-text>
                 </div>
             </div>
         </div>
@@ -69,6 +78,11 @@ export default {
         return {
             drawer: false,
             group: null,
+            icons: [
+                'mdi-facebook',
+                'mdi-instagram',
+                'mdi-telegram',
+            ],
         }
     },
     watch: {
@@ -80,15 +94,15 @@ export default {
 </script>
 
 <style scoped>
-.v-info{
+/*.v-info{
     width: 160px;
-}
+}*/
 .soc{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     flex-direction: row;
-    width: 120px;
+  /*  width: 120px;*/
     float: right;
 }
 .soc>a{
@@ -96,6 +110,10 @@ export default {
 }
 .soc-im{
     max-width: 25px;
+}
+.socs {
+    margin-right: 0px!important;
+    margin-left: 0px!important;
 }
 @keyframes rotation {
     0% {
@@ -154,7 +172,7 @@ form{
     }
 
     .img-logo {
-        width: 132px;
+        width: 109px;
     }
 }
 @media only screen and (max-width: 260px) {
@@ -166,5 +184,8 @@ form{
     .v-header {
         display: none;
     }
+}
+.nav-top-m>button{
+    color:#fff!important;
 }
 </style>

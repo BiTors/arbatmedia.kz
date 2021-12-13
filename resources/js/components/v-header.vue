@@ -82,57 +82,13 @@ export default {
     justify-content: space-between;
     flex-direction: row;
 }
-#rec114502490 [data-elem-id="1557996723691"].t-sbs-anim_started .tn-atom__sbs-anim-wrapper {
-animation: sbs-anim-rec114502490-1557996723691 2.9s infinite linear;
-backface-visibility: hidden;
-}
 
-@keyframes sbs-anim-rec114502490-1557996723691 {
-0% {opacity:1;transform:translateX(0px)translateY(0px)rotate(0deg)scale(1,1);animation-timing-function:linear;}
-72.41% {opacity:0;transform:translateX(0px)translateY(0px)rotate(0deg)scale(1,1);animation-timing-function:linear;}
-75.86% {opacity:1;transform:translateX(0px)translateY(0px)rotate(0deg)scale(1,1);animation-timing-function:linear;}
-79.31% {opacity:0;transform:translateX(0px)translateY(0px)rotate(0deg)scale(1,1);animation-timing-function:linear;}
-82.76% {opacity:1;transform:translateX(0px)translateY(0px)rotate(0deg)scale(1,1);animation-timing-function:linear;}
-86.21% {opacity:0;transform:translateX(0px)translateY(0px)rotate(0deg)scale(1,1);animation-timing-function:linear;}
-89.66% {opacity:1;transform:translateX(0px)translateY(0px)rotate(0deg)scale(1,1);animation-timing-function:linear;}
-100% {opacity:0;transform:translateX(0px)translateY(0px)rotate(0deg)scale(1,1);}
-}
-
-#rec114502490 [data-elem-id="1557996821900"].t-sbs-anim_started .tn-atom__sbs-anim-wrapper {
-animation: sbs-anim-rec114502490-1557996821900 2.6s infinite linear;
-backface-visibility: hidden;
-}
-
-@keyframes sbs-anim-rec114502490-1557996821900 {
-0% {opacity:0;transform:translateX(0px)translateY(0px)rotate(0deg)scale(1,1);}
-1% {opacity:0;transform:translateX(0px)translateY(0px)rotate(0deg)scale(1,1);}
-4.85% {opacity:1;transform:translateX(0px)translateY(0px)rotate(0deg)scale(1,1);}
-8.7% {opacity:0;transform:translateX(0px)translateY(0px)rotate(0deg)scale(1,1);}
-12.55% {opacity:1;transform:translateX(0px)translateY(0px)rotate(0deg)scale(1,1);}
-24.09% {opacity:0;transform:translateX(0px)translateY(0px)rotate(0deg)scale(1,1);}
-100% {opacity:0;transform:translateX(0px)translateY(0px)rotate(0deg)scale(1,1);}
-}
-.tok{
-opacity: 0.8;
-background-position: center center;
-border-color: transparent;
-border-style: solid;
-}
-.tok-wrap{
-animation: sbs-anim-rec114502490-1557996723691 2.9s infinite linear;
-backface-visibility: hidden;
-    position: absolute;
-    right: 0;
-    left: 0;
-    justify-content: space-between;
-    align-items: center;
-}
 img{
     width: 100%;
 }
 .book{
 margin: 0 auto;
-    z-index: 9999;
+    z-index: 1;
 }
 ._im-rotate{
 position: absolute;
@@ -215,7 +171,7 @@ transform: rotate(
 }
 .area {
 padding-bottom: 65px;
-height: 620px;
+
 
 }
 }
@@ -238,7 +194,7 @@ transform: rotate(
 }
 .area {
 padding-bottom: 65px;
-height: 620px;
+
 }
 }
 @media only screen and (max-width: 1030px){
@@ -272,7 +228,7 @@ transform: rotate(
 }
 .area {
 padding-bottom: 45px;
-height: 480px;
+
 }
 ._gtx {
     font-size: 4rem;
@@ -300,7 +256,7 @@ transform: rotate(
 }
 .area {
     padding-bottom: 45px;
-    height: 480px;
+
 }
 ._gth {
     font-size: 2rem;
@@ -327,7 +283,7 @@ transform: rotate(
 }
 .area {
 padding-bottom: 45px;
-height: 420px;
+
 }
 ._gth {
     font-size: 1.7rem;
@@ -338,7 +294,7 @@ height: 420px;
 }
 @media only screen and (min-width: 320px) and (max-width: 389px) {
 .area {
-    height: 253px;
+
     padding-top: 45px;
 }
 ._gth {
@@ -360,7 +316,7 @@ height: 420px;
 @media only screen and (max-width: 320px) {
 
 .area {
-    height: 253px;
+
 }
 ._gtx {
     font-size: 1.4rem;

@@ -40,6 +40,62 @@ html{
 a {
     text-decoration: none!important;
 }
+#rec114502490 [data-elem-id="1557996723691"].t-sbs-anim_started .tn-atom__sbs-anim-wrapper {
+    animation: sbs-anim-rec114502490-1557996723691 2.9s infinite linear;
+    backface-visibility: hidden;
+}
+
+@keyframes sbs-anim-rec114502490-1557996723691 {
+    0% {opacity:1;transform:translateX(0px)translateY(0px)rotate(0deg)scale(1,1);animation-timing-function:linear;}
+    72.41% {opacity:0;transform:translateX(0px)translateY(0px)rotate(0deg)scale(1,1);animation-timing-function:linear;}
+    75.86% {opacity:1;transform:translateX(0px)translateY(0px)rotate(0deg)scale(1,1);animation-timing-function:linear;}
+    79.31% {opacity:0;transform:translateX(0px)translateY(0px)rotate(0deg)scale(1,1);animation-timing-function:linear;}
+    82.76% {opacity:1;transform:translateX(0px)translateY(0px)rotate(0deg)scale(1,1);animation-timing-function:linear;}
+    86.21% {opacity:0;transform:translateX(0px)translateY(0px)rotate(0deg)scale(1,1);animation-timing-function:linear;}
+    89.66% {opacity:1;transform:translateX(0px)translateY(0px)rotate(0deg)scale(1,1);animation-timing-function:linear;}
+    100% {opacity:0;transform:translateX(0px)translateY(0px)rotate(0deg)scale(1,1);}
+}
+
+#rec114502490 [data-elem-id="1557996821900"].t-sbs-anim_started .tn-atom__sbs-anim-wrapper {
+    animation: sbs-anim-rec114502490-1557996821900 2.6s infinite linear;
+    backface-visibility: hidden;
+}
+
+@keyframes sbs-anim-rec114502490-1557996821900 {
+    0% {opacity:0;transform:translateX(0px)translateY(0px)rotate(0deg)scale(1,1);}
+    1% {opacity:0;transform:translateX(0px)translateY(0px)rotate(0deg)scale(1,1);}
+    4.85% {opacity:1;transform:translateX(0px)translateY(0px)rotate(0deg)scale(1,1);}
+    8.7% {opacity:0;transform:translateX(0px)translateY(0px)rotate(0deg)scale(1,1);}
+    12.55% {opacity:1;transform:translateX(0px)translateY(0px)rotate(0deg)scale(1,1);}
+    24.09% {opacity:0;transform:translateX(0px)translateY(0px)rotate(0deg)scale(1,1);}
+    100% {opacity:0;transform:translateX(0px)translateY(0px)rotate(0deg)scale(1,1);}
+}
+.tok{
+    opacity: 0.8;
+    background-position: center center;
+    border-color: transparent;
+    border-style: solid;
+}
+.tok-wrap{
+    animation: sbs-anim-rec114502490-1557996723691 2.9s infinite linear;
+    backface-visibility: hidden;
+    position: absolute;
+    right: 0;
+    left: 0;
+    justify-content: space-between;
+    align-items: center;
+}
+.v-card__subtitle, .v-card__text, .v-card__title {
+    padding: 16px 0px!important;
+}
+.v-application .primary {
+    background-color: #1e75f3 !important;
+    border-color: #1e75f3 !important;
+}
+
+#two{
+    width: 80%;
+}
 .fast-web{
     font-family: 'SegoeUI';
 }
@@ -52,10 +108,15 @@ body{
 .container{
     min-height: 400px!important;
 }
+.item-pay-info{
+    margin: 15px 0px;
+}
 h2{
-    text-align: center;
     color: #C4C4C4;
     font-size: 2rem;
+}
+.ctr{
+    text-align: center;
 }
 ._f0{
     text-align: center;
@@ -369,7 +430,7 @@ input{
         bottom: 10px;
     }
     .img-logo {
-        width: 200px;
+        max-width: 137px;
         position: relative;
         top: 4px;
     }
@@ -411,6 +472,14 @@ input{
     }
 }
 @media only screen and (max-width: 320px) {
+    .header-panel {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 0 16px;
+        align-items: center;
+    }
+    .soc{display: none!important;}
     .fast-t {
         font-size: 5rem;
         bottom: 10px;
@@ -522,6 +591,7 @@ input{
 .wiz{
     width: 25px;
 }
+
 @media only screen and (max-width: 768px){
     h2{
         font-size: 1.2rem;
@@ -804,5 +874,18 @@ b{
     line-height: 27px;
     font-weight: 500;
 }
+@media only screen and (max-width: 280px) {
+    .soc {
+        display: none!important;
+    }
+    .header-panel {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 0 16px;
+        align-items: center;
+    }
+}
+
 
 

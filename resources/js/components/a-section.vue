@@ -1,8 +1,9 @@
 <template>
     <div>
-
+        <v-content>
+            <SectionOne id="book"/>
             <v-container id="two">
-                <div class="dt" >
+                <div class="dt dt-m" >
                     <h2>КІТАП ТУРАЛЫ</h2>
                 </div>
                 <v-row class="mb-12 _med">
@@ -41,7 +42,18 @@
                     <div class="title-line-r"></div>
                     <div class="title-line-l"></div>
                 </div>
+                <div class="item-tok">
+                    <div id="rec114502490" class="tok-wrap sbs-anim-keyframes">
+                        <div class="fs">
+                            <div class="tok alb">
+                                <img style="width: 391px; transform: scale(-1, 1)" src="/img/thunder.png" alt="thunder">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
             </v-container>
+        </v-content>
     </div>
 </template>
 
@@ -169,7 +181,20 @@ export default {
     margin-left: 10px;
 }
 .alb{
-    margin: 10px;
+    transform: rotate(
+        279deg);
+    top: -222px;
+    position: absolute;
+    /* bottom: 1000px; */
+    left: -12px;
+}
+.albs{
+    transform: rotate(
+        20deg);
+    bottom: 180px;
+    position: absolute;
+    /* bottom: 1000px; */
+    right: -45px;
 }
 .a-cont{
     font-size: 16px;
@@ -218,19 +243,75 @@ export default {
     }
 }
 @media only screen and (max-width: 720px) {
-    ._med{
+   /* ._med{
         display: none;
-    }
+    }*/
     ._med-m{
         display: block;
     }
 }
-@media only screen and (max-width: 440px) {
+@media only screen and (max-width: 600px) {
     ._ma{
         flex-direction: column;
+    }
+    ._med{
+        flex-direction: column;
+    }
+    .dt-m{
+
+    }
+    .v-application .mb-12 {
+         margin-bottom: 0!important;
+    }
+    .title-line-r {
+        height: 1px;
+        left: 60%;
+        background: #c4c4c4;
+    }
+    .title-line-l {
+        height: 1px;
+        right:60%;
+        background: #c4c4c4;
+    }
+    .container{
+        margin-top: 0!important;
+    }
+    .container {
+        width: 100%!important;
     }
 
 }
 
+@media only screen and (max-width: 320px) {
+    .title-line-r {
+        height: 1px;
+        left: 60%;
+        background: #c4c4c4;
+    }
+    .title-line-l {
+        height: 1px;
+        right: 60%;
+        background: #c4c4c4;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .title-line-r {
+        height: 1px;
+        left: 60%;
+        background: #c4c4c4;
+    }
+    .title-line-l {
+        height: 1px;
+        right: 60%;
+        background: #c4c4c4;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .container{
+        width: 80%;
+    }
+}
 
 </style>

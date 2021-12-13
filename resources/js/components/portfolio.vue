@@ -1,10 +1,11 @@
 <template>
     <div>
-        <v-lazy id="p_five">
-            <v-container class="p_five" >
+        <v-content>
+            <SectionOne id="author"/>
+            <v-container class="p_five rb" >
                 <div class="dt">
-                    <h2>Кітап – самғай бастағандарға емес,  шарықтау кезінде шаршағандар үшін.</h2>
-                    <h2>Кәсібін – өзі деп көруші адамдар үшін</h2>
+                    <h2 class="ctr">Кітап – самғай бастағандарға емес,  шарықтау кезінде шаршағандар үшін.</h2>
+                    <h2  class="ctr">Кәсібін – өзі деп көруші адамдар үшін</h2>
                 </div>
                 <div class="item-body">
                     <div class="item-block-info">
@@ -27,10 +28,10 @@
                             </div>
                             <div class="item-block-info">
                                 <div class="ti">
-                                    Бейімділік
+                                    Энергиямен қуаттану
                                 </div>
                                 <div class="ti-body">
-                                    Кәсіптегі алғашқы қадамын бұрын жасаған, сондай-ақ енді ғана жасай бастаған адамдар үшін powerbank-кітап
+                                    Өз өмірін өздігінен сүруді таңдағандар үшін қуат күші
                                 </div>
                             </div>
                         </div>
@@ -40,10 +41,10 @@
                             </div>
                             <div class="item-block-info">
                                 <div class="ti">
-                                    Бейімділік
+                                    Өмірлік тәжірибе
                                 </div>
                                 <div class="ti-body">
-                                    Кәсіптегі алғашқы қадамын бұрын жасаған, сондай-ақ енді ғана жасай бастаған адамдар үшін powerbank-кітап
+                                    Сәтті тәжірибелер мен автордың жетістікке жетуіне септігін тигізген мағыналар жиынтығы.
                                 </div>
                             </div>
                         </div>
@@ -53,10 +54,10 @@
                             </div>
                             <div class="item-block-info">
                                 <div class="ti">
-                                    Бейімділік
+                                    Жауынгерлік даярлық
                                 </div>
                                 <div class="ti-body">
-                                    Кәсіптегі алғашқы қадамын бұрын жасаған, сондай-ақ енді ғана жасай бастаған адамдар үшін powerbank-кітап
+                                    Сергіп, жаңа жауынгерлік даярлыққа қайту үшін жылдам әрі қысқа разряд.
                                 </div>
                             </div>
                         </div>
@@ -66,7 +67,8 @@
                     </div>
                 </div>
             </v-container>
-        </v-lazy>
+        </v-content>
+
     </div>
 </template>
 
@@ -93,8 +95,30 @@ export default {
 </script>
 
 <style scoped>
+.rb::before {
+    content: "";
+    display: block;
+    width: 1000px;
+    height: 100%;
+    background: #FFF;
+    position: absolute;
+    top: 0px;
+    left: 99.9%;
+}
+.rb::after {
+    content: "";
+    display: block;
+    width: 1000px;
+    height: 100%;
+    background: #FFF;
+    position: absolute;
+    top: 0px;
+    right: 99.9%;
+}
 .item-img>img{
     max-width: 320px;
+    top: 19px;
+    position: relative;
 }
 .item-flex{
     display: flex;
@@ -109,9 +133,10 @@ export default {
 }
 .ti{
     text-transform: uppercase;
-    font-weight: 900;
+    font-weight: bolder;
     color: #585858;
 }
+
 .item-body{
     display: flex;
     justify-content: space-around;
@@ -124,6 +149,7 @@ export default {
 
 .p_five{
     background: #fff;
+    position: relative;
 }
 .chips-img>img{
     width: 25px;
@@ -131,5 +157,77 @@ export default {
 }
 h2 {
     color: #585858;
+}
+
+@media only screen and (max-width: 600px) {
+
+
+    .item-img>img {
+        max-width: 283px;
+        top: 1px;
+        position: relative;
+        left: 172px;
+        opacity: 0.5;
+    }
+    .item-img {
+        position: absolute;
+        z-index: 0;
+    }
+    .p_five{
+        overflow: hidden;
+    }
+}
+@media only screen and (max-width: 1024px) {
+    .p_five{
+        overflow: hidden;
+    }
+    .item-body{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .dt{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .item-img>img {
+        max-width: 283px;
+        top: 1px;
+        position: relative;
+        left: 172px;
+        opacity: 0.5;
+    }
+    .item-img {
+        position: absolute;
+        z-index: 0;
+    }
+}
+@media only screen and (max-width: 280px) {
+    .p_five{
+        overflow: hidden;
+    }
+    .item-body{
+        width: 100%;
+        margin: 0 auto;
+    }
+    .dt{
+        width: 100%;
+        margin: 0 auto;
+    }
+    .item-img>img {
+        max-width: 283px;
+        top: 1px;
+        position: relative;
+        left: 104px;
+        opacity: 0.5;
+    }
+    .item-img {
+        position: absolute;
+        z-index: 0;
+    }
+}@media only screen and (max-width: 320px) {
+    .item-body{
+        width: 100%;
+        margin: 0 auto;
+    }
 }
 </style>

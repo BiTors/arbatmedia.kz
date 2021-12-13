@@ -1,8 +1,8 @@
 <template>
     <div>
 
-        <v-container style="margin-top: 120px;">
-        <v-row  class="mb-3">
+        <v-container style="margin-top: 120px;" id="one">
+        <v-row  class="mb-3 _med">
             <v-col mb="4" xl="4" lg="4">
                 <div class="ry">
                     <img src="/img/rybakov.jpg" alt="Игорь Рыбаков">
@@ -11,7 +11,7 @@
             <v-col class="item-info-b2" mb="6"
                    xl="6"
                    lg="6">
-                <h2> Игорь Рыбаков <br> 47 жас</h2>
+                <h2 class="ctr"> Игорь Рыбаков <br> 47 жас</h2>
                 <div class="cot-a">
                     <p>“Кәсіпкердің рөлі – әлемнің дамуына және одан әрі көркеюіне
                     жеткіліксіз нәрсені қосу. Мен өз борышымды осы деп білемін!„©</p>
@@ -38,7 +38,7 @@
 
                 </div>
             </v-col>
-            <v-col  mb="2" xl="2" lg="2">
+            <v-col class="wing"  mb="2" xl="2" lg="2">
                 <div class="rb"></div>
             </v-col>
         </v-row>
@@ -69,11 +69,13 @@ export default {
     position: relative;
     max-height: 360px;
 }
-
+.wing{
+    max-width: 40px;
+}
 .rb::before{
     content: "";
     display: block;
-    width: 380px;
+    width: 1000px;
     height: 100%;
     background: #FFF;
     position: absolute;
@@ -82,12 +84,13 @@ export default {
 }
 .ry>img{
     max-width: 360px;
-
+    top: 7px;
+    position: relative;
 }
 .ry::after{
     content: "";
     display: block;
-    width: 380px;
+    width: 1000px;
     height: 100%;
     background: #FFF;
     position: absolute;
@@ -107,5 +110,87 @@ export default {
     margin: 10px 0px;
     font-family: 'SegoeUI';
 }
+.cot-a {
+    font-size: var(--size);
+    font-family: system-ui;
+    font-weight: 400;
+    margin: 15px;
+}
+@media only screen and (max-width: 600px) {
 
+    ._med{
+        flex-direction: column;
+        width: 100%!important;;
+    }
+    .ry>img {
+        max-width: 100%;
+    }
+    .container{
+        margin-top: 0!important;
+    }
+    .item-info-b2 {
+       bottom: 0!important;
+    }
+.wing{
+    display: none;
+}
+    .ry::after {
+        display: none;
+
+    }
+
+
+}
+
+@media only screen and (max-width: 768px) {
+
+    ._med{
+        flex-direction: column;
+    }
+    .ry>img {
+        max-width: 100%;
+    }
+    .container{
+        margin-top: 0!important;
+    }
+    .item-info-b2 {
+        bottom: 0!important;
+    }
+    .wing{
+        display: none;
+    }
+    .ry::after {
+        display: none;
+
+    }
+    .ry {
+        max-height: 100%;
+    }
+}@media only screen and (max-width: 1024px) {
+
+    ._med{
+        flex-direction: column;
+        width: 80%;
+        margin: 0 auto;
+    }
+    .ry>img {
+        max-width: 100%;
+    }
+    .container{
+        margin-top: 0!important;
+    }
+    .item-info-b2 {
+        bottom: 0!important;
+    }
+    .wing{
+        display: none;
+    }
+    .ry::after {
+        display: none;
+
+    }
+    .ry {
+        max-height: 100%;
+    }
+}
 </style>

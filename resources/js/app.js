@@ -20,6 +20,9 @@ const store = new Vuex.Store(
     Store
 );
 
+import VueScrollTo from 'vue-scrollto'
+Vue.use(VueScrollTo)
+
 
 import vuetify from './plugins/vuetify'
 
