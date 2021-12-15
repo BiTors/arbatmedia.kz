@@ -18,17 +18,13 @@
              <v-col  class="font-weight-bold text-center  text-uppercase" md="6" offset-md="3">
                      <v-col class="_title">
                          <div v-if="getSingle">
-                             ДЛЯ ЗАКАЗА УСЛУГ ИЛИ КОНСУЛЬТАЦИИ, ЗАПОЛНИТЕ ФОРМУ НИЖЕ.
-                         </div>
-                         <div v-else>
-                             {{getTitle}}
+                             Оформление заказа онлайн
                          </div>
                      </v-col>
              </v-col>
              <v-col class="_wr-back" md="6" offset-md="3">
              <v-col class="font-weight-bold text-center  text-uppercase" md="10" offset-md="1">
-                 <div v-if="getSingle"></div>
-                 <div v-else>Для расчета цены и заказа услуг, заполните форму ниже.</div>
+                 <div v-if="getSingle">Для заказа заполните форму.</div>
              </v-col>
              <v-col class="form-b vf">
                  <v-text-field
@@ -42,169 +38,90 @@
                      color="blue"
                      required>
                  </v-text-field>
-             </v-col>
-             <v-col class=" text-subtitle-2 text-center  text-uppercase" md="10" offset-md="1">
-                 Выберите удобный способ связи:
-             </v-col>
-             <v-col>
-                 <v-sheet class="mx-auto" max-width="700">
-                     <v-slide-group v-model="b2b_active"  multiple >
-                         <v-slide-item
-                             v-for="n in b2b"
-                             :key="n"
-                             v-slot="{ active, toggle }">
-                             <v-btn
-                                 class="mx-2  text-sm-justify"
-                                 :input-value="active"
-                                 active-class="blue--text"
-                                 depressed
-                                 outlined
-                                 @click="toggle"
-                             >
-                                 {{ n }}
-                             </v-btn>
-                         </v-slide-item>
-                     </v-slide-group>
-                 </v-sheet>
-             </v-col>
-             <v-col dense class=" vf form-b" >
-                 <v-text-field
-                     v-if="form.tel"
-                     v-model="formT.tel"
-                     :rules="formT.telRules"
-                     outlined
-                     dense
-                     color="blue"
-                     append-icon="fa-phone"
-                     label="Номер телефона"
-                     required>
-                 </v-text-field>
-                 <v-text-field
-                     v-if="form.wp"
-                     v-model="formT.wp"
-                     :rules="formT.wpRules"
-                     outlined
-                     dense
-                     color="blue"
-                     append-icon="fa-whatsapp"
-                     label="Номер WhatsApp"
-                     required>
-                 </v-text-field>
-                 <v-text-field
-                     v-if="form.tg"
-                     v-model="formT.tg"
-                     append-icon="fa-telegram"
-                     :rules="formT.tgRules"
-                     outlined
-                     dense
-                     color="blue"
-                     label="Номер/Логин Telegtma"
-                     required>
-                 </v-text-field>
-                 <v-text-field
-                     v-if="form.vk"
-                     v-model="formT.vk"
-                     :rules="formT.vkRules"
-                     outlined
-                     dense
-                     color="blue"
-                     append-icon="fa-vk"
-                     label="id vk"
-                     required>
-                 </v-text-field>
-                 <v-text-field
-                     v-if="form.fb"
-                     v-model="formT.fb"
-                     append-icon="fa-facebook-square"
-                     outlined
-                     dense
-                     color="blue"
-                     :rules="formT.fbRules"
-                     label="id fb"
-                     required>
-                 </v-text-field>
-             </v-col>
-             <v-col v-if="getOptions.a === false && getSingle === false" class=" text-subtitle-2 text-center  text-uppercase" md="10" offset-md="1">
-                 <div v-if="getOptions.b === 0 && getSingle === false">Выберите вид консультации, которую вы хотите получить от Газизы Габи:</div>
-                 <div v-if="getOptions.b === 1 && getSingle === false">Выберите вид продающего текста, который вам нужен:</div>
-                 <div v-if="getOptions.b === 2 && getSingle === false">Верите языковую пару для перевода: Переводы с русского на казахский:</div>
-                 <v-col  dense class=" vf form-b">
-                     <v-select v-if="getOptions.b === 1 && getSingle === false"
-                         :items="service['options_one']"
-                         v-model="subSelect"
-                         label="Выберете услугу"
+
+                     <v-text-field
+                         v-model="formT.Phone"
+                         type="number"
+                         append-icon="fa-phone"
+                         :rules="formT.PhoneRules"
+                         label="Номер телефона"
                          outlined
                          dense
                          color="blue"
-                         required
-                     ></v-select>
-                     <v-select v-if="getOptions.b === 0 && getSingle === false"
-                               :items="service['options_two']"
-                               v-model="subSelect"
-                               label="Выберете услугу"
-                               outlined
-                               dense
-                               color="blue"
-                               required
-                     ></v-select>
-                     <v-select v-if="getOptions.b === 2 && getSingle === false"
-                               :items="service['options_free']"
-                               v-model="subSelect"
-                               label="Выберете услугу"
-                               outlined
-                               dense
-                               color="blue"
-                               required
-                     ></v-select>
-                 </v-col>
+                         required>
+                     </v-text-field>
              </v-col>
-             <v-col class=" text-subtitle-2 text-center  text-uppercase" md="10" offset-md="1">
-                 <div v-if="getSingle">Ваше сообщение:</div>
-                 <div v-else>Комментарий к заказу:</div>
-             <v-col  dense class=" vf form-b">
-                 <v-textarea v-if="getSingle === true"
-                     outlined
-                     color="blue"
-                     v-model="msg"
-                     name="input-7-4"
-                     label="Ваше сообщение"
-                 ></v-textarea>
-                 <v-textarea v-if="getSingle === false"
-                             outlined
-                             color="blue"
-                             v-model="msg"
-                             name="input-7-4"
-                             label="Комментарий к заказу"
-                 ></v-textarea>
+
+             <v-col class=" text-subtitle-2" md="10" offset-md="1">
+                 <v-radio-group v-model="radios">
+                     <template v-slot:label>
+                         <div> <strong>Доставка:</strong></div>
+                     </template>
+                     <v-radio  value="Pickup">
+                         <template v-slot:label>
+                             <div>Самовывоз(г.Алматы)<strong class="green--text"> Кофе в подарок!</strong></div>
+                         </template>
+                     </v-radio>
+                     <v-radio value="Courier">
+                         <template v-slot:label>
+                             <div>Курьером(г.Алматы) <strong class="green--text"> Бесплатно</strong></div>
+                         </template>
+                     </v-radio>
+                 </v-radio-group>
              </v-col>
-             </v-col>
+            <v-col v-if="radios === 'Pickup'">
+                <strong>Пункт самовывоза:</strong> г.Алматы ул.Кашгарская 69<br>
+                <strong>В буднии дни</strong> с 9.00 до 18.00
+                <v-col class="form-b vf">
+                    <v-radio-group v-model="pay">
+                        <template v-slot:label>
+                            <div> <strong>Оплата:</strong></div>
+                        </template>
+                        <v-radio  value="online">
+                            <template v-slot:label>
+                                <div>Онлайн на сайте</div>
+                            </template>
+                        </v-radio>
+                        <v-radio value="cach">
+                            <template v-slot:label>
+                                <div>Наличными при получении</div>
+                            </template>
+                        </v-radio>
+                    </v-radio-group>
+                </v-col>
+            </v-col>
+            <v-col v-if="radios === 'Courier'">
+                Доставка в пределах г.Алматы,бесплатно<br>
+               В буднии дни с 9.00 до 18.00
+                <v-col class="form-b vf">
+                    <v-radio-group v-model="pay">
+                        <template v-slot:label>
+                            <div> <strong>Оплата:</strong></div>
+                        </template>
+                        <v-radio  value="online">
+                            <template v-slot:label>
+                                <div>Онлайн на сайте</div>
+                            </template>
+                        </v-radio>
+                        <v-radio value="cach">
+                            <template v-slot:label>
+                                <div>Наличными курьеру</div>
+                            </template>
+                        </v-radio>
+                    </v-radio-group>
+                </v-col>
+            </v-col>
              </v-col>
              <div class="_mrg-btn footer text-center">
-                 <v-btn :loading="getLoad" :disabled="isDisable"
+                 <v-btn :loading="false" :disabled="isDisable"
                         color="primary"
                         @click="sendForm()"
                  >
-                     Отправить
+                     {{btn}}
                  </v-btn>
              </div>
          </v-card>
      </v-dialog>
-     <v-snackbar
-         v-model="gSnackbar"
-     >
-         {{ getText }}
-
-         <template color="green"  v-slot:action="{ attrs }">
-             <v-btn
-                 color="pink"
-                 text
-                 v-bind="attrs"
-                 @click="Snackbars()"
-             >
-                 Закрыть
-             </v-btn>
-         </template>
-     </v-snackbar>
  </div>
 </template>
 
@@ -214,99 +131,50 @@ export default {
     name: "steps",
     data () {
         return {
+            btn:'Оформить',
+            deliv:'',
+            pay:'',
+            getOptions:'',
+            radios:'',
             msg:'',
             subSelect:'',
             formT: {
-                tel: '',
-                telRules: [],
-                wp: '',
-                wpRules: [],
-                tg: '',
-                tgRules: [],
-                vk: '',
-                vkRules: [],
-                fb: '',
-                fbRules: [],
                 Name: '',
                 NameRules: [Name => Name.length <= 30 || 'Макс 30 символов'],
+                Phone: '',
+                PhoneRules: [Name => Name.length <= 12 || 'Ошибка'],
             },
-            b2b:['Телефон','WhatsApp','Telegram','VK','FB'],
-            service: {
-                options_one:[
-                    'Текст для сайта',
-                    'Коммерческое предложение',
-                    'Тексты для социальных сетей',
-                    'Легенда бренда (история компании)',
-                    'Ведение тематического блога (SEO-оптимизированные статьи) ',
-                    'Другое (напишите в графе комментарий к заказу) '],
-                options_two:[
-                    'Консультация по написанию книги',
-                    'Консультации по бренд-стратегии для социальных сетей'],
-                options_free:[
-                    'Переводы с казахского на русский',
-                    'Переводы с русского на английский',
-                    'Переводы с английского на русский'],
-    },
             b2b_active:[],
-            form:{
-                tel:false,
-                wp:false,
-                tg:false,
-                vk:false,
-                fb:false
-            },
-            total:'',
         }
     },
     beforeUpdate() {
-        this.total = this.getBase.a
-        this.form.tel = this.b2b_active.includes(0);
-        this.form.wp = this.b2b_active.includes(1);
-        this.form.tg = this.b2b_active.includes(2);
-        this.form.vk = this.b2b_active.includes(3);
-        this.form.fb = this.b2b_active.includes(4);
-
+        /*this.total = this.getBase.a*/
     },
     computed: {
-        ...mapGetters({getSingle:'getSingle',getLoad:'getLoad',gSnackbar:'gSnackbar',getDialog:'getDialog',getBase:'getBase',getMsg:'getMsg',getOptions:'getOptions',getTitle:'getTitle',getText:'getText'}),
+        ...mapGetters({getSingle:'getSingle',getDialog:'getDialog'}),
         isDisable() {
-            this.msg = this.getMsg
-       if(this.formT.Name.length > 0 && this.formT.Name.length <= 30){
-           if(this.formT.fb.length > 3 || this.formT.vk.length > 3 || this.formT.tg.length > 3 || this.formT.wp.length > 10 || this.formT.tel.length > 10){
-                 return false
+            if(this.pay === ""){
+                return true
             }
-         }
-       return true
-       },
+            if(this.pay === 'online'){
+                this.btn = 'Оплатить'
+            }else{
+                this.btn = 'Оформить'
+            }
+            return false
+        },
     },
     methods:{
-        ...mapActions({actionClose:'actionClose',sendFormBot:'sendFormBot',aSnackbar:'aSnackbar'}),
-        Snackbars(){
-            this.aSnackbar();
-        },
+        ...mapActions({payBook:'payBook'}),
+
         async  sendForm(){
-            await this.sendFormBot({message:this.msg,name:this.formT,ser:this.getBase.b,subDer:this.subSelect});
+            await this.payBook();
             this.empty()
         },
         close() {
                 this.empty()
                 this.actionClose()
         },
-        empty(){
-            this.formT.tel = ''
-            this.formT.wp = ''
-            this.formT.tg = ''
-            this.formT.vk = ''
-            this.formT.fb = ''
-            this.formT.Name = ''
-            this.subSelect=''
-            this.b2b_active = [],
-            this.form.tel = false,
-                this.form.wp = false,
-                this.form.tg = false,
-                this.form.vk = false,
-                this.form.fb = false
-        }
     },
 }
 </script>

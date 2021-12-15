@@ -1,5 +1,5 @@
 import mainForm from './modules/mainForm';
-import rewrite from './modules/rewrite';
+/*import rewrite from './modules/rewrite';*/
 
 export default {
     state: {},
@@ -8,7 +8,7 @@ export default {
     mutations: {},
     modules:{
         mainForm,
-        rewrite,
+/*        rewrite,*/
 
     }
 }
