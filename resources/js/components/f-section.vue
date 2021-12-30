@@ -1,6 +1,5 @@
 <template>
-    <div>
-
+    <v-main id="author">
         <v-container style="margin-top: 120px;" id="one">
         <v-row  class="mb-3 _med">
             <v-col mb="4" xl="4" lg="4">
@@ -43,7 +42,7 @@
             </v-col>
         </v-row>
         </v-container>
-    </div>
+    </v-main>
 </template>
 
 <script>

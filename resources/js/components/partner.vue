@@ -1,7 +1,5 @@
 <template>
-<div>
-    <v-content>
-        <SectionOne id="pay"/>
+    <v-main id="pay">
     <v-container>
             <div class="info-pay" >
                 <div>
@@ -27,8 +25,9 @@
                             <div class="item-pay-info-price">
                                 5000 ₸
                             </div>
-                            <div id="pay" class="item-pay-info-action">
-                              <v-btn
+                            <div id="pay"  class="item-pay-info-action">
+                              <v-btn class="pulse"
+                                  @click="send"
                                   rounded
                                   color="primary"
                                   dark
@@ -51,17 +50,75 @@
                 </div>
             </div>
     </v-container>
-    </v-content>
-</div>
+    </v-main>
 </template>
 
 <script>
+import {mapActions, mapGetters} from "vuex";
+
 export default {
-    name: "partner"
+    name: "partner",
+
+    methods:{
+        ...mapActions({
+            actionSingle:'actionSingle',
+        }),
+        send(){
+            this.actionSingle()
+            this.$gtag.reportConversion({
+                'send_to': 'AW-980326951/Z3viCNOLjowDEKe0utMD', // the custom tag to be reported
+                value: 10,
+                currency: 'USD',
+                'transaction_id': '',
+            });
+
+        },
+    }
 }
 </script>
 
 <style scoped>
+.item-pay-info-price{
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 800;
+}
+.pulse {
+    display: block;
+    background: #cca92c;
+    cursor: pointer;
+    box-shadow: 0 0 0 rgba(204,169,44, 0.4);
+    animation: pulse 2s infinite;
+}
+.pulse:hover {
+    animation: none;
+}
+
+@-webkit-keyframes pulse {
+    0% {
+        -webkit-box-shadow: 0 0 0 0 #1e75f3;
+    }
+    70% {
+        -webkit-box-shadow: 0 0 0 10px rgba(204,169,44, 0);
+    }
+    100% {
+        -webkit-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+    }
+}
+@keyframes pulse {
+    0% {
+        -moz-box-shadow: 0 0 0 0 #1e75f3;
+        box-shadow: 0 0 0 0 #1e75f3;
+    }
+    70% {
+        -moz-box-shadow: 0 0 0 10px rgba(204,169,44, 0);
+        box-shadow: 0 0 0 10px rgba(204,169,44, 0);
+    }
+    100% {
+        -moz-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+        box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+    }
+}
 .info-pay{
     display: flex;
     justify-content: center;

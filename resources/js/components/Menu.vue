@@ -1,6 +1,6 @@
 <template>
 <div>
-    <div class="v-headers">
+    <div class="v-headers" id="start">
         <div class="header-panel ">
             <div class="logo">
                 <router-link to="/">  <img class="img-logo" src="/img/logo-arbat.png" alt=""></router-link>
@@ -22,18 +22,18 @@
                         >
                             <a  v-scroll-to="'#author'" href="#">
                                 <v-list-item>
-                                    <v-list-item-title class="mm">АВТОР ТУРАЛЫ</v-list-item-title>
+                                    <v-list-item-title class="mm"><router-link :to="{ path: '/' }"  v-scroll-to="'#author'">АВТОР ТУРАЛЫ</router-link></v-list-item-title>
                                 </v-list-item>
                             </a>
 
                             <a  v-scroll-to="'#book'" href="#">
                                 <v-list-item>
-                                    <v-list-item-title class="mm">КІТАП ТУРАЛЫ</v-list-item-title>
+                                    <v-list-item-title class="mm"><router-link :to="{ path: '/' }"  v-scroll-to="'#book'">КІТАП ТУРАЛЫ</router-link></v-list-item-title>
                                 </v-list-item>
                             </a>
                             <a  v-scroll-to="'#pay'" href="#">
                                 <v-list-item>
-                                    <v-list-item-title class="mm">САТЫП АЛУ</v-list-item-title>
+                                    <v-list-item-title class="mm"><router-link :to="{ path: '/' }"  v-scroll-to="'#pay'">САТЫП АЛУ</router-link></v-list-item-title>
                                 </v-list-item>
                             </a>
 
@@ -44,9 +44,10 @@
             <div class="v-header">
                 <nav class="nav-top">
                     <ul class="navbar-nav">
-                        <li class="mm active"><router-link to="#"  v-scroll-to="'#author'">АВТОР ТУРАЛЫ</router-link></li>
-                        <li class="mm"><router-link to="#"  v-scroll-to="'#book'">КІТАП ТУРАЛЫ</router-link></li>
-                        <li class="mm"><router-link to="#"  v-scroll-to="'#pay'">САТЫП АЛУ</router-link></li>
+
+                        <li class="mm active"><router-link :to="{ path: '/'}"  v-scroll-to="'#author'">АВТОР ТУРАЛЫ</router-link></li>
+                        <li class="mm"><router-link :to="{ path: '/' }"  v-scroll-to="'#book'">КІТАП ТУРАЛЫ</router-link></li>
+                        <li class="mm"><router-link :to="{ path: '/' }"  v-scroll-to="'#pay'">САТЫП АЛУ</router-link></li>
                     </ul>
                 </nav>
             </div>
@@ -54,14 +55,16 @@
                 <div class="soc">
                     <v-card-text>
                         <v-btn
-                            v-for="icon in icons"
+                            v-for="(icon,index) in icons"
                             :key="icon"
                             class="socs mx-4 white--text"
                             icon
                         >
-                            <v-icon >
-                                {{ icon }}
-                            </v-icon>
+                            <a class="ai" :href="link[index]" target="_blank">
+                                <v-icon >
+                                    {{icon}}
+                                </v-icon>
+                            </a>
                         </v-btn>
                     </v-card-text>
                 </div>
@@ -81,8 +84,11 @@ export default {
             icons: [
                 'mdi-facebook',
                 'mdi-instagram',
-                'mdi-telegram',
             ],
+            link:[
+                'https://www.facebook.com/arbatbookskz',
+                'https://www.instagram.com/rybakov.kz/'
+            ]
         }
     },
     watch: {
@@ -97,6 +103,9 @@ export default {
 /*.v-info{
     width: 160px;
 }*/
+.ai>i{
+  color:#fff!important;
+}
 .soc{
     display: flex;
     justify-content: space-evenly;

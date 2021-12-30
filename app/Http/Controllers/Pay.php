@@ -2,27 +2,44 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\PayWalet;
 use Illuminate\Http\Request;
+use App\order\order;
 use Illuminate\Support\Facades\Http;
 class Pay extends Controller
 {
+    public function resultPay(Request $request): string
+    {
+        $ordera = PayWalet::where('order', $request['WMI_PAYMENT_NO'])->first();
+        $bot = new order();
+
+        if(isset($ordera)){
+            $ordera->status_pay = '3123123123';
+            $ordera->save();
+            $bot->Status($request);
+            return 'WMI_RESULT=OK';
+        }
+        return 'WMI_RESULT=RETRY';
+    }
+
     public function payment(Request $request){
-
-        $key="6f64754761386650325f4d4870546d724a74335c6478636a774643";
-        $URI = 'https://wl.walletone.com/checkout/checkout/Index';
-        /*$params['headers'] = ['Content-Type' => 'application/json', 'Authorization' => 'Zoho-authtoken ' . $AuthCode];*/
-        $params = [
-            'WMI_MERCHANT_ID' => "172357951243",
-            'WMI_PAYMENT_NO' => time(),
-            'WMI_CURRENCY_ID' => "643",
-            'WMI_PAYMENT_AMOUNT' => "5000",
-            'WMI_DESCRIPTION' => "BASE64:".base64_encode('Покупка книги "ТОК"'),
-            'SUCCESS_URL' => "https://arbatbooks.kz/success",
-            'WMI_FAIL_URL' => "https://arbatbooks.kz/fail",
-            'WMI_SIGNATURE' =>$key,
-            'WMI_AUTO_ADJUST_AMOUNT'=>1
-        ];
-        echo $response = Http::get($URI, $params);
-
+        $order = new order();
+        $order =  $order->ChekOrder($request);
+        return response($order);
+    }
+    public function paymentCash(Request $request){
+        $order = new order();
+        $order =  $order->paymentCash($request);
+        return response($order);
+    }
+    public function paymentOnline(Request $request){
+        $order = new order();
+        $order =  $order->paymentOnline($request);
+        return response($order);
+    }
+    public function paymentOnlineEms(Request $request){
+        $order = new order();
+        $order =  $order->paymentOnlineEms($request);
+        return response($order);
     }
 }

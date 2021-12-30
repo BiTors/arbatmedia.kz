@@ -1,7 +1,5 @@
 <template>
-    <div>
-        <v-content>
-            <SectionOne id="book"/>
+        <v-main id="book">
             <v-container id="two">
                 <div class="dt dt-m" >
                     <h2>КІТАП ТУРАЛЫ</h2>
@@ -53,16 +51,15 @@
                     </div>
                 </div>
             </v-container>
-        </v-content>
-    </div>
+        </v-main>
 </template>
 
 <script>
-import d_sec from './d-section.vue';
+
 export default {
     name: "a-section",
     components:{
-        d_sec
+
     },
     data(){
         return{

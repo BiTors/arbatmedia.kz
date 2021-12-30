@@ -17,11 +17,12 @@ Route::get('/{any}', function () {
     return view('index');
 })->where('any','.*');
 
-Route::post('/bot', [TelegramBot::class, 'Bot']);
-Route::post('/coll-me', [TelegramBot::class, 'botOne']);
-Route::post('/rewrite', [Revrite::class, 'rewrite']);
-Route::post('/rewrites', [Revrite::class, 'translate']);
 Route::post('/payment', [Pay::class, 'payment']);
+Route::post('/payment-cash', [Pay::class, 'paymentCash']);
+Route::post('/payment-online', [Pay::class, 'paymentOnline']);
+Route::post('/payment-online-ems', [Pay::class, 'paymentOnlineEms']);
+Route::post('/pay/result', [Pay::class, 'resultPay']);
+Route::post('/pay/stay', [Pay::class, 'resultPayStay']);
 
 //Auth::routes();
 

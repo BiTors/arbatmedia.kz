@@ -25,7 +25,8 @@ Vue.use(VueScrollTo)
 
 
 import vuetify from './plugins/vuetify'
-
+import { VueMaskDirective } from 'v-mask'
+Vue.directive('mask', VueMaskDirective);
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -33,7 +34,13 @@ import vuetify from './plugins/vuetify'
  *
  * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
  */
+import VueGtag from 'vue-gtag-conversion';
 
+Vue.use(VueGtag, {
+    id: 'AW-980326951', // Your Adwords ID
+    enabled: true, // defaults to true. Plugin can be disabled by setting this to false for Ex: enabled: process.env.NODE_ENV !== 'production' (optional)
+    debug: true, // Whether or not display console log debugs (optional)
+});
 Vue.component('c_menu', () => import('./components/Menu.vue'));
 Vue.component('sec_e', () => import('./components/e-section.vue'));
 Vue.component('steps', () => import('./components/steps.vue'));

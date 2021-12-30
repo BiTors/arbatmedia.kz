@@ -1,7 +1,5 @@
 <template>
-    <div>
-        <v-content>
-            <SectionOne id="author"/>
+        <v-main>
             <v-container class="p_five rb" >
                 <div class="dt">
                     <h2 class="ctr">Кітап – самғай бастағандарға емес,  шарықтау кезінде шаршағандар үшін.</h2>
@@ -67,9 +65,7 @@
                     </div>
                 </div>
             </v-container>
-        </v-content>
-
-    </div>
+        </v-main>
 </template>
 
 <script>
